@@ -1,0 +1,73 @@
+#topic-glossary {
+    @extend #topic;
+
+    .box-topic {
+        gap: 236px;
+
+        .child {
+            &:has(.topic-img) {
+                text-align: left;
+            }
+        }
+    }
+}
+
+#glossary-list {
+    @extend #learn-list;
+
+    .glossary-alphabet {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 80px;
+        align-items: flex-end;
+
+        a {
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: bold;
+            color: var(--c-text);
+            line-height: 1;
+            
+            &.active {
+                color: var(--c-red);
+                font-size: 35px;
+            }
+        }
+    }
+
+    .learn-list {
+        .item {
+            align-items: flex-start;
+
+            .item-img {
+                padding-top: 20px;
+            }
+            .item-content {
+                .item-content__name {
+                    font-size: 20px;
+                    font-weight: bold;
+
+                    a {
+                        text-decoration: none;
+                        color: inherit;
+                        
+                        &:hover {
+                            color: var(--c-red);
+                        }
+                    }
+                }
+
+                &:has(.show) {
+                    .item-content__name {
+                        color: var(--c-red);
+                    }
+                }
+
+                .card-body {
+                    padding: 70px 0 0;
+                    max-width: 660px;
+                }
+            }
+        }
+    }
+}

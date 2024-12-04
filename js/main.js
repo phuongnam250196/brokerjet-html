@@ -23,15 +23,15 @@ $(document).ready(function () {
     items: 1,
   });
 
-  $(window).on("load scroll", function () {
-    //現時点のスクロールの高さ取得
-    const scrollPosition = $(window).scrollTop();
-    if (scrollPosition > 109) {
-      $("#header").css({
-        background: "var(--c-gray-2)",
-      });
-    } else {
-      $("#header").css({ background: "unset" });
-    }
-  });
+  // $(window).on("load scroll", function () {
+  //   //現時点のスクロールの高さ取得
+  //   const scrollPosition = $(window).scrollTop();
+  //   if (scrollPosition > 109) {
+  //     $("#header").css({
+  //       background: "var(--c-gray-2)",
+  //     });
+  //   } else {
+  //     $("#header").css({ background: "unset" });
+  //   }
+  // });
 });

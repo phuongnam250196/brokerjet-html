@@ -1,0 +1,215 @@
+#topic-trading_platforms {
+  @extend #topic;
+
+  .box-topic {
+    gap: 0;
+
+    .child {
+      .topic-group {
+        padding-left: 110px;
+        width: calc(100% + 20px);
+      }
+    }
+  }
+}
+
+#trading-platforms {
+  padding-top: 100px;
+  .trading-platforms__head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 132px;
+
+    .child {
+      &:first-child {
+        width: calc(100% + 20px);
+      }
+      .child-img {
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        img {
+          position: absolute;
+          left: 40px;
+          bottom: 0;
+        }
+      }
+      .box-title {
+        margin-bottom: 54px;
+
+        .box-title__title {
+            font-size: 40px;
+            margin-bottom: 0;
+            line-height: 1;
+        }
+        .box-title__subtitle {
+            font-size: 40px;
+            line-height: 45px;
+            margin-bottom: 100px;
+        }
+        .box-title__desc {
+            font-size: 20px;
+            line-height: 35px;
+            white-space: pre-line;
+        }
+    }
+    }
+  }
+
+  .trading-platforms__why {
+    margin-bottom: 140px;
+    .trading-platforms__why-img {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+    .trading-platforms__why-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: flex-start;
+      gap: 70px;
+
+      .child {
+        .box-title {
+          margin-bottom: 70px;
+        }
+        &:last-child {
+          .box-title {
+            margin-bottom: 105px;
+          }
+        }
+      }
+    }
+  }
+
+  .trading-platforms__benefit {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 180px;
+
+    .child {
+      .benefit-img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        img {
+          position: absolute;
+          right: 90px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      .box-title {
+        .box-title__title {
+          font-size: 40px;
+          line-height: 1;
+          margin-bottom: 0;
+        }
+        .box-title__subtitle {
+          font-size: 40px;
+          margin-bottom: 50px;
+        }
+      }
+
+      .list {
+        .item {
+          &:not(&:last-child) {
+            margin-bottom: 40px;
+          }
+          .title {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 30px;
+          }
+          .desc {
+            font-size: 20px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .trading-platforms__reason {
+    .trading-platforms__reason-title {
+      position: relative;
+      text-align: center;
+      padding-top: 24px;
+
+      .group-title {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .title {
+          font-weight: bold;
+          font-size: 46px;
+          line-height: 1;
+        }
+        .subtitle {
+          font-size: 34px;
+          font-weight: bold;
+          color: var(--c-red);
+          line-height: 1;
+        }
+      }
+      .img-reason {
+      }
+    }
+    .trading-platforms__reason-list {
+      max-width: 750px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px 0;
+
+      .item {
+        display: flex;
+        align-items: flex-end;
+        gap: 32px;
+
+        &:nth-child(2) {
+          gap: 70px;
+        }
+
+        &:first-child {
+          padding-right: 48px;
+          padding-bottom: 64px;
+        }
+
+        &:nth-child(2) {
+          padding-left: 48px;
+          padding-bottom: 64px;
+          border-left: 1px solid var(--c-red);
+          border-bottom: 1px solid var(--c-red);
+          border-bottom-left-radius: 8px;
+        }
+
+        &:nth-child(3) {
+          padding-right: 48px;
+          padding-top: 64px;
+          border-right: 1px solid var(--c-red);
+          border-top: 1px solid var(--c-red);
+          border-top-right-radius: 8px;
+        }
+
+        &:nth-child(4) {
+          gap: 70px;
+          padding-left: 48px;
+          padding-top: 64px;
+        }
+
+        .item-icon {
+          width: 60px;
+        }
+        .item-title {
+          font-size: 22px;
+          font-weight: bold;
+          white-space: pre-line;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+}
