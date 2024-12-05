@@ -14,30 +14,44 @@
 </head>
 
 <body>
-    <div class="offcanvas offcanvas-start" id="menu-mobile">
-        <div class="offcanvas-header">
-            <button type="button" data-bs-dismiss="offcanvas">
-                <svg xmlns="http://www.w3.org/2000/svg" width="37" height="43" viewBox="0 0 37 43" fill="none">
-                    <path d="M1 11L36.5 32" stroke="white" />
-                    <path d="M36.7183 11.3781L0.781726 31.622" stroke="white" />
-                </svg>
-            </button>
-        </div>
-        <div class="offcanvas-body">
+    <div class="overlay" id="overlay">
+        <nav class="overlay-menu">
             <ul class="navbar-nav">
                 <li class="menu-item">
-                    <a class="nav-link" href="#">Springsについて</a>
+                    <a class="nav-link" href="javascript:void(0)">Home</a>
                 </li>
                 <li class="menu-item">
-                    <a class="nav-link" href="#">サービス内容</a>
+                    <a class="nav-link" href="javascript:void(0)">Market</a>
                 </li>
                 <li class="menu-item">
-                    <a class="nav-link" href="#">会社概要</a>
+                    <a class="nav-link" href="javascript:void(0)">Trading</a>
                 </li>
                 <li class="menu-item">
-                    <a class="nav-link" href="#">チーム</a>
+                    <a class="nav-link" href="javascript:void(0)">Education</a>
+                </li>
+                <li class="menu-item">
+                    <a class="nav-link" href="javascript:void(0)">About</a>
                 </li>
             </ul>
+            <div class="d-flex header-language">
+                <a href="#" class="active">EN</a> | <a href="#">VI</a>
+            </div>
+            <div class="d-flex header-login">
+                <a href="#" class="active">
+                    <img src="./imgs/icon-register.png" alt="" class="img-register"> Register
+                </a>
+                <a href="#">
+                    <img src="./imgs/icon-login.png" alt="" class="img-login"> Login
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <div id="toggle">
+        <div class="toggle-custom">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </div>
 
@@ -392,7 +406,7 @@
                 <div class="child">
                     <div class="child-title"><img src="./imgs/icon-1.png" alt=""><span>Useful link</span></div>
                     <ul class="child-nav-footer">
-                        <li>About us</li>
+                        <li><a href="#">About us</a></li>
                         <li>Eduacation</li>
                         <li>Trading Platforms</li>
                         <li>Markets</li>

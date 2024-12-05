@@ -14,30 +14,44 @@
 </head>
 
 <body>
-    <div class="offcanvas offcanvas-start" id="menu-mobile">
-        <div class="offcanvas-header">
-            <button type="button" data-bs-dismiss="offcanvas">
-                <svg xmlns="http://www.w3.org/2000/svg" width="37" height="43" viewBox="0 0 37 43" fill="none">
-                    <path d="M1 11L36.5 32" stroke="white" />
-                    <path d="M36.7183 11.3781L0.781726 31.622" stroke="white" />
-                </svg>
-            </button>
-        </div>
-        <div class="offcanvas-body">
+    <div class="overlay" id="overlay">
+        <nav class="overlay-menu">
             <ul class="navbar-nav">
                 <li class="menu-item">
-                    <a class="nav-link" href="#">Springsについて</a>
+                    <a class="nav-link" href="javascript:void(0)">Home</a>
                 </li>
                 <li class="menu-item">
-                    <a class="nav-link" href="#">サービス内容</a>
+                    <a class="nav-link" href="javascript:void(0)">Market</a>
                 </li>
                 <li class="menu-item">
-                    <a class="nav-link" href="#">会社概要</a>
+                    <a class="nav-link" href="javascript:void(0)">Trading</a>
                 </li>
                 <li class="menu-item">
-                    <a class="nav-link" href="#">チーム</a>
+                    <a class="nav-link" href="javascript:void(0)">Education</a>
+                </li>
+                <li class="menu-item">
+                    <a class="nav-link" href="javascript:void(0)">About</a>
                 </li>
             </ul>
+            <div class="d-flex header-language">
+                <a href="#" class="active">EN</a> | <a href="#">VI</a>
+            </div>
+            <div class="d-flex header-login">
+                <a href="#" class="active">
+                    <img src="./imgs/icon-register.png" alt="" class="img-register"> Register
+                </a>
+                <a href="#">
+                    <img src="./imgs/icon-login.png" alt="" class="img-login"> Login
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <div id="toggle">
+        <div class="toggle-custom">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </div>
 
@@ -96,7 +110,7 @@
     <!-- Topic -->
     <section id="topic-glossary">
         <div class="container-c">
-            <div class="box-topic" id="accordion">
+            <div class="box-topic">
                 <div class="child">
                     <img class="topic-img" src="./imgs/img-9.png" alt="">
                 </div>
@@ -104,7 +118,7 @@
                     <div class="topic-group">
                         <h3 class="topic-title">Trading Glossary​</h3>
                         <p class="topic-desc">Enhance your trading skills with our
-                            expert guidance, advanced tools, 
+                            expert guidance, advanced tools,
                             and comprehensive terminology.</p>
                         <a href="#" class="topic-btn">Star Trading</a>
                     </div>
@@ -144,63 +158,122 @@
                 <a href="#">Y</a>
                 <a href="#">Z</a>
             </div>
-            <div class="learn-list">
+            <div class="learn-list" id="accordion">
                 <div class="item">
                     <img src="./imgs/icon-2.png" alt="" class="item-img">
                     <div class="item-content">
-                        <h4 class="item-content__name" data-bs-toggle="collapse" href="#collapseOne">What is leverage?</h4>
+                        <h4 class="item-content__name" data-bs-toggle="collapse" href="#collapseOne">What is leverage?
+                        </h4>
                         <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
                             <div class="card-body">
-                                An Abandoned Baby is a Japanese candlestick pattern signalling a possible reversal. It consists of three candles. In a downtrend, a long red candle is followed by a Doji that gaps lower. The third candle has a long green body and gaps above the Doji's high.</div>
+                                An Abandoned Baby is a Japanese candlestick pattern signalling a possible reversal. It
+                                consists of three candles. In a downtrend, a long red candle is followed by a Doji that
+                                gaps lower. The third candle has a long green body and gaps above the Doji's high.</div>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <img src="./imgs/icon-2.png" alt="" class="item-img">
                     <div class="item-content">
-                        <h4 class="item-content__name">How to calculate leverage?</h4>
+                        <h4 class="item-content__name" data-bs-toggle="collapse" href="#collapse2">How to calculate
+                            leverage?</h4>
+                        <div id="collapse2" class="collapse" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                An Abandoned Baby is a Japanese candlestick pattern signalling a possible reversal. It
+                                consists of three candles. In a downtrend, a long red candle is followed by a Doji that
+                                gaps lower. The third candle has a long green body and gaps above the Doji's high.</div>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
                     <img src="./imgs/icon-2.png" alt="" class="item-img">
                     <div class="item-content">
-                        <h4 class="item-content__name">What is a take profit/ stop-loss order?</h4>
+                        <h4 class="item-content__name" data-bs-toggle="collapse" href="#collapse3">What is a take
+                            profit/ stop-loss order?</h4>
+                        <div id="collapse3" class="collapse" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                An Abandoned Baby is a Japanese candlestick pattern signalling a possible reversal. It
+                                consists of three candles. In a downtrend, a long red candle is followed by a Doji that
+                                gaps lower. The third candle has a long green body and gaps above the Doji's high.</div>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
                     <img src="./imgs/icon-2.png" alt="" class="item-img">
                     <div class="item-content">
-                        <h4 class="item-content__name">What is a trailing stop order?</h4>
+                        <h4 class="item-content__name" data-bs-toggle="collapse" href="#collapse4">What is a trailing
+                            stop order?</h4>
+                        <div id="collapse4" class="collapse" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                An Abandoned Baby is a Japanese candlestick pattern signalling a possible reversal. It
+                                consists of three candles. In a downtrend, a long red candle is followed by a Doji that
+                                gaps lower. The third candle has a long green body and gaps above the Doji's high.</div>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
                     <img src="./imgs/icon-2.png" alt="" class="item-img">
                     <div class="item-content">
-                        <h4 class="item-content__name">What types of pending orders are there?</h4>
+                        <h4 class="item-content__name" data-bs-toggle="collapse" href="#collapse5">What types of pending
+                            orders are there?</h4>
+                        <div id="collapse5" class="collapse" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                An Abandoned Baby is a Japanese candlestick pattern signalling a possible reversal. It
+                                consists of three candles. In a downtrend, a long red candle is followed by a Doji that
+                                gaps lower. The third candle has a long green body and gaps above the Doji's high.</div>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
                     <img src="./imgs/icon-2.png" alt="" class="item-img">
                     <div class="item-content">
-                        <h4 class="item-content__name">What is an order?</h4>
+                        <h4 class="item-content__name" data-bs-toggle="collapse" href="#collapse6">What is an order?
+                        </h4>
+                        <div id="collapse6" class="collapse" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                An Abandoned Baby is a Japanese candlestick pattern signalling a possible reversal. It
+                                consists of three candles. In a downtrend, a long red candle is followed by a Doji that
+                                gaps lower. The third candle has a long green body and gaps above the Doji's high.</div>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
                     <img src="./imgs/icon-2.png" alt="" class="item-img">
                     <div class="item-content">
-                        <h4 class="item-content__name">What is the available balance?</h4>
+                        <h4 class="item-content__name" data-bs-toggle="collapse" href="#collapse7">What is the available
+                            balance?</h4>
+                        <div id="collapse7" class="collapse" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                An Abandoned Baby is a Japanese candlestick pattern signalling a possible reversal. It
+                                consists of three candles. In a downtrend, a long red candle is followed by a Doji that
+                                gaps lower. The third candle has a long green body and gaps above the Doji's high.</div>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
                     <img src="./imgs/icon-2.png" alt="" class="item-img">
                     <div class="item-content">
-                        <h4 class="item-content__name">How to calculate net profits and losses? </h4>
+                        <h4 class="item-content__name" data-bs-toggle="collapse" href="#collapse8">How to calculate net
+                            profits and losses? </h4>
+                        <div id="collapse8" class="collapse" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                An Abandoned Baby is a Japanese candlestick pattern signalling a possible reversal. It
+                                consists of three candles. In a downtrend, a long red candle is followed by a Doji that
+                                gaps lower. The third candle has a long green body and gaps above the Doji's high.</div>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
                     <img src="./imgs/icon-2.png" alt="" class="item-img">
                     <div class="item-content">
-                        <h4 class="item-content__name">What is leverage?</h4>
+                        <h4 class="item-content__name" data-bs-toggle="collapse" href="#collapse9">What is leverage?
+                        </h4>
+                        <div id="collapse9" class="collapse" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                An Abandoned Baby is a Japanese candlestick pattern signalling a possible reversal. It
+                                consists of three candles. In a downtrend, a long red candle is followed by a Doji that
+                                gaps lower. The third candle has a long green body and gaps above the Doji's high.</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -294,11 +367,21 @@
                 </div>
             </div>
 
-            <p class="box-footer__foot">Broker Jet is a registered brand of Broker Jet Co. LTD., and is licensed by the Securities and Exchange Regulator of Cambodia (SERC) with authorization number 013. Trading Foreign Exchange (Forex) and Contracts for Differences (CFD’s) is highly speculative, carries a high level of risk and may not be suitable for all investors. You may sustain a loss of some or all of your invested capital, therefore, you should not speculate with capital that you cannot afford to lose. You should be aware of all the risks associated with trading on margin. This website is marketed and operated by Broker Jet Co. LTD. and is located at Amass Central Tower, Building 176, Street 63, Sangkat Boeung Keng Kang 1, Khan Boeung Keng Kang, Phnom Penh, Cambodia.
+            <p class="box-footer__foot">Broker Jet is a registered brand of Broker Jet Co. LTD., and is licensed by the
+                Securities and Exchange Regulator of Cambodia (SERC) with authorization number 013. Trading Foreign
+                Exchange (Forex) and Contracts for Differences (CFD’s) is highly speculative, carries a high level of
+                risk and may not be suitable for all investors. You may sustain a loss of some or all of your invested
+                capital, therefore, you should not speculate with capital that you cannot afford to lose. You should be
+                aware of all the risks associated with trading on margin. This website is marketed and operated by
+                Broker Jet Co. LTD. and is located at Amass Central Tower, Building 176, Street 63, Sangkat Boeung Keng
+                Kang 1, Khan Boeung Keng Kang, Phnom Penh, Cambodia.
 
-                Restricted Jurisdictions: We do not establish accounts to residents of certain jurisdictions including the USA, Japan, North Korea, Iran, the EU and the EEA. For further details please see Terms & Conditions.
-                
-                Disclaimer: All market expert analysis is intended for information use only and does not advocate trading in stocks, forex, or cryptocurrencies. All acts of trading are at your own risk.</p>
+                Restricted Jurisdictions: We do not establish accounts to residents of certain jurisdictions including
+                the USA, Japan, North Korea, Iran, the EU and the EEA. For further details please see Terms &
+                Conditions.
+
+                Disclaimer: All market expert analysis is intended for information use only and does not advocate
+                trading in stocks, forex, or cryptocurrencies. All acts of trading are at your own risk.</p>
         </div>
     </footer>
 

@@ -136,6 +136,10 @@ p {
         line-height: 35px;
         white-space: pre-line;
     }
+
+    @media (max-width: 800.98px) {
+        text-align: center;
+    }
 }
 
 .list-custom {
@@ -166,4 +170,15 @@ p {
             }
         }
     }
+}
+
+.base-btn {
+    @include center_flex;
+    width: 190px;
+    height: 48px;
+    border-radius: 24px;
+    background-color: var(--c-red-2);
+    font-size: 20px;
+    color: var(--c-white);
+    text-decoration: none;
 }

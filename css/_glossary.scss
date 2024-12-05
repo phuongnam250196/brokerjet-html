@@ -10,6 +10,23 @@
             }
         }
     }
+
+    @media (max-width: 1000.98px) {
+        .box-topic {
+            gap: 20px;
+        }
+    }
+
+    @media (max-width: 800.98px) {
+        .box-topic {
+            gap: 40px;
+            .child {
+                &:has(.topic-img) {
+                    text-align: center;
+                }
+            }
+        }
+    }
 }
 
 #glossary-list {
@@ -27,11 +44,29 @@
             font-weight: bold;
             color: var(--c-text);
             line-height: 1;
+            position: relative;
             
             &.active {
                 color: var(--c-red);
                 font-size: 35px;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 40px;
+                    height: 2px;
+                    background-color: var(--c-red);
+                }
             }
+        }
+
+        @media (max-width: 1000.98px) {
+            gap: 20px 40px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-bottom: 40px;
         }
     }
 
@@ -70,4 +105,5 @@
             }
         }
     }
+    
 }
