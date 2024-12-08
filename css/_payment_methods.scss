@@ -1,0 +1,113 @@
+#topic-payment_methods {
+  @extend #topic;
+  padding: 120px 0 130px;
+
+  .box-topic {
+    gap: 0;
+    .child {
+      .topic-img {
+        width: 100%;
+        mix-blend-mode: multiply;
+        padding-right: 120px;
+      }
+      &:last-child {
+        padding-left: 16px;
+      }
+    }
+  }
+
+  @media (max-width: 1000.98px) {
+    .box-topic {
+      .child {
+        .topic-img {
+          padding-right: 40px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 800.98px) {
+    padding: 30px 0 60px;
+    .box-topic {
+      gap: 40px;
+
+      .child {
+        .topic-img {
+          width: 60%;
+        }
+        .topic-group {
+          padding-left: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+#payment_methods {
+  padding: 130px 0 320px;
+  .box-payment_methods {
+    padding-left: 250px;
+    .child {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 50px;
+
+      &:not(&:last-child) {
+        margin-bottom: 120px;
+      }
+      .payment_methods__img {}
+      .payment_methods__content {
+        .payment_methods__content-title {
+          font-size: 20px;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+        .payment_methods__content-desc {
+          font-size: 20px;
+          line-height: 35px;
+        }
+
+      }
+    }
+  }
+
+  @media (max-width: 1000.98px) {
+    .box-payment_methods {
+      padding: 0 40px;
+    }
+  }
+
+  @media (max-width: 800.98px) {
+    padding: 60px 0 140px;
+    .box-payment_methods {
+      padding: 0 20px;
+      .child {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        text-align: center;
+  
+        &:not(&:last-child) {
+          margin-bottom: 50px;
+        }
+        .payment_methods__img {
+          max-width: 320px;
+          width: 100%;
+          margin: 0 auto;
+        }
+        .payment_methods__content {
+          .payment_methods__content-title {
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+          .payment_methods__content-desc {
+            font-size: 20px;
+            line-height: 35px;
+          }
+  
+        }
+      }
+    }
+  }
+}

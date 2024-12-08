@@ -1160,6 +1160,7 @@
   --c-gray: #b5b5b5;
   --c-gray-2: #797979;
   --c-gray-3: #dadada;
+  --c-gray-4: #cacaca;
   --c-white: #fff;
   --c-white-2: #f6f6f6;
   --c-blue: #154A7C;
@@ -1740,6 +1741,9 @@ p {
   width: 50%;
   line-height: 40px;
 }
+#footer .box-footer .box-footer__body .child .child-nav-footer li:hover a {
+  color: var(--c-red);
+}
 #footer .box-footer .box-footer__body .child .child-nav-footer li a {
   text-decoration: none;
   color: unset;
@@ -1814,36 +1818,36 @@ p {
   }
 }
 
-#topic, #topic-web_trader, #topic-trading_platforms, #topic-stock, #topic-glossary, #topic-learn {
+#topic, #topic-faqs, #topic-about_us, #topic-contact, #topic-payment_methods, #topic-trading_platforms, #topic-commodities, #topic-indices, #topic-forex, #topic-stock, #topic-glossary, #topic-learn {
   padding: 60px 0;
   background-image: linear-gradient(0deg, rgb(246, 246, 246) 0%, rgba(255, 255, 255, 0) 100%);
 }
-#topic .box-topic, #topic-web_trader .box-topic, #topic-trading_platforms .box-topic, #topic-stock .box-topic, #topic-glossary .box-topic, #topic-learn .box-topic {
+#topic .box-topic, #topic-faqs .box-topic, #topic-about_us .box-topic, #topic-contact .box-topic, #topic-payment_methods .box-topic, #topic-trading_platforms .box-topic, #topic-commodities .box-topic, #topic-indices .box-topic, #topic-forex .box-topic, #topic-stock .box-topic, #topic-glossary .box-topic, #topic-learn .box-topic {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
   align-items: center;
   gap: 80px;
 }
-#topic .box-topic .child:has(.topic-img), #topic-web_trader .box-topic .child:has(.topic-img), #topic-trading_platforms .box-topic .child:has(.topic-img), #topic-stock .box-topic .child:has(.topic-img), #topic-glossary .box-topic .child:has(.topic-img), #topic-learn .box-topic .child:has(.topic-img) {
+#topic .box-topic .child:has(.topic-img), #topic-faqs .box-topic .child:has(.topic-img), #topic-about_us .box-topic .child:has(.topic-img), #topic-contact .box-topic .child:has(.topic-img), #topic-payment_methods .box-topic .child:has(.topic-img), #topic-trading_platforms .box-topic .child:has(.topic-img), #topic-commodities .box-topic .child:has(.topic-img), #topic-indices .box-topic .child:has(.topic-img), #topic-forex .box-topic .child:has(.topic-img), #topic-stock .box-topic .child:has(.topic-img), #topic-glossary .box-topic .child:has(.topic-img), #topic-learn .box-topic .child:has(.topic-img) {
   text-align: center;
 }
-#topic .box-topic .child .topic-img, #topic-web_trader .box-topic .child .topic-img, #topic-trading_platforms .box-topic .child .topic-img, #topic-stock .box-topic .child .topic-img, #topic-glossary .box-topic .child .topic-img, #topic-learn .box-topic .child .topic-img {
+#topic .box-topic .child .topic-img, #topic-faqs .box-topic .child .topic-img, #topic-about_us .box-topic .child .topic-img, #topic-contact .box-topic .child .topic-img, #topic-payment_methods .box-topic .child .topic-img, #topic-trading_platforms .box-topic .child .topic-img, #topic-commodities .box-topic .child .topic-img, #topic-indices .box-topic .child .topic-img, #topic-forex .box-topic .child .topic-img, #topic-stock .box-topic .child .topic-img, #topic-glossary .box-topic .child .topic-img, #topic-learn .box-topic .child .topic-img {
   margin: 0 auto;
 }
-#topic .box-topic .child .topic-group .topic-title, #topic-web_trader .box-topic .child .topic-group .topic-title, #topic-trading_platforms .box-topic .child .topic-group .topic-title, #topic-stock .box-topic .child .topic-group .topic-title, #topic-glossary .box-topic .child .topic-group .topic-title, #topic-learn .box-topic .child .topic-group .topic-title {
+#topic .box-topic .child .topic-group .topic-title, #topic-faqs .box-topic .child .topic-group .topic-title, #topic-about_us .box-topic .child .topic-group .topic-title, #topic-contact .box-topic .child .topic-group .topic-title, #topic-payment_methods .box-topic .child .topic-group .topic-title, #topic-trading_platforms .box-topic .child .topic-group .topic-title, #topic-commodities .box-topic .child .topic-group .topic-title, #topic-indices .box-topic .child .topic-group .topic-title, #topic-forex .box-topic .child .topic-group .topic-title, #topic-stock .box-topic .child .topic-group .topic-title, #topic-glossary .box-topic .child .topic-group .topic-title, #topic-learn .box-topic .child .topic-group .topic-title {
   color: var(--c-red);
   font-size: 50px;
   font-family: "UTMHelveBold", sans-serif;
   font-weight: bold;
   margin-bottom: 30px;
 }
-#topic .box-topic .child .topic-group .topic-desc, #topic-web_trader .box-topic .child .topic-group .topic-desc, #topic-trading_platforms .box-topic .child .topic-group .topic-desc, #topic-stock .box-topic .child .topic-group .topic-desc, #topic-glossary .box-topic .child .topic-group .topic-desc, #topic-learn .box-topic .child .topic-group .topic-desc {
+#topic .box-topic .child .topic-group .topic-desc, #topic-faqs .box-topic .child .topic-group .topic-desc, #topic-about_us .box-topic .child .topic-group .topic-desc, #topic-contact .box-topic .child .topic-group .topic-desc, #topic-payment_methods .box-topic .child .topic-group .topic-desc, #topic-trading_platforms .box-topic .child .topic-group .topic-desc, #topic-commodities .box-topic .child .topic-group .topic-desc, #topic-indices .box-topic .child .topic-group .topic-desc, #topic-forex .box-topic .child .topic-group .topic-desc, #topic-stock .box-topic .child .topic-group .topic-desc, #topic-glossary .box-topic .child .topic-group .topic-desc, #topic-learn .box-topic .child .topic-group .topic-desc {
   white-space: pre-line;
   font-size: 25px;
   margin-bottom: 64px;
 }
-#topic .box-topic .child .topic-group .topic-btn, #topic-web_trader .box-topic .child .topic-group .topic-btn, #topic-trading_platforms .box-topic .child .topic-group .topic-btn, #topic-stock .box-topic .child .topic-group .topic-btn, #topic-glossary .box-topic .child .topic-group .topic-btn, #topic-learn .box-topic .child .topic-group .topic-btn {
+#topic .box-topic .child .topic-group .topic-btn, #topic-faqs .box-topic .child .topic-group .topic-btn, #topic-about_us .box-topic .child .topic-group .topic-btn, #topic-contact .box-topic .child .topic-group .topic-btn, #topic-payment_methods .box-topic .child .topic-group .topic-btn, #topic-trading_platforms .box-topic .child .topic-group .topic-btn, #topic-commodities .box-topic .child .topic-group .topic-btn, #topic-indices .box-topic .child .topic-group .topic-btn, #topic-forex .box-topic .child .topic-group .topic-btn, #topic-stock .box-topic .child .topic-group .topic-btn, #topic-glossary .box-topic .child .topic-group .topic-btn, #topic-learn .box-topic .child .topic-group .topic-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1856,24 +1860,24 @@ p {
   text-decoration: none;
 }
 @media (max-width: 800.98px) {
-  #topic .box-topic, #topic-web_trader .box-topic, #topic-trading_platforms .box-topic, #topic-stock .box-topic, #topic-glossary .box-topic, #topic-learn .box-topic {
+  #topic .box-topic, #topic-faqs .box-topic, #topic-about_us .box-topic, #topic-contact .box-topic, #topic-payment_methods .box-topic, #topic-trading_platforms .box-topic, #topic-commodities .box-topic, #topic-indices .box-topic, #topic-forex .box-topic, #topic-stock .box-topic, #topic-glossary .box-topic, #topic-learn .box-topic {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  #topic .box-topic .child .topic-img, #topic-web_trader .box-topic .child .topic-img, #topic-trading_platforms .box-topic .child .topic-img, #topic-stock .box-topic .child .topic-img, #topic-glossary .box-topic .child .topic-img, #topic-learn .box-topic .child .topic-img {
+  #topic .box-topic .child .topic-img, #topic-faqs .box-topic .child .topic-img, #topic-about_us .box-topic .child .topic-img, #topic-contact .box-topic .child .topic-img, #topic-payment_methods .box-topic .child .topic-img, #topic-trading_platforms .box-topic .child .topic-img, #topic-commodities .box-topic .child .topic-img, #topic-indices .box-topic .child .topic-img, #topic-forex .box-topic .child .topic-img, #topic-stock .box-topic .child .topic-img, #topic-glossary .box-topic .child .topic-img, #topic-learn .box-topic .child .topic-img {
     width: 60%;
   }
-  #topic .box-topic .child .topic-group .topic-title, #topic-web_trader .box-topic .child .topic-group .topic-title, #topic-trading_platforms .box-topic .child .topic-group .topic-title, #topic-stock .box-topic .child .topic-group .topic-title, #topic-glossary .box-topic .child .topic-group .topic-title, #topic-learn .box-topic .child .topic-group .topic-title {
+  #topic .box-topic .child .topic-group .topic-title, #topic-faqs .box-topic .child .topic-group .topic-title, #topic-about_us .box-topic .child .topic-group .topic-title, #topic-contact .box-topic .child .topic-group .topic-title, #topic-payment_methods .box-topic .child .topic-group .topic-title, #topic-trading_platforms .box-topic .child .topic-group .topic-title, #topic-commodities .box-topic .child .topic-group .topic-title, #topic-indices .box-topic .child .topic-group .topic-title, #topic-forex .box-topic .child .topic-group .topic-title, #topic-stock .box-topic .child .topic-group .topic-title, #topic-glossary .box-topic .child .topic-group .topic-title, #topic-learn .box-topic .child .topic-group .topic-title {
     font-size: 32px;
     text-align: center;
     margin-bottom: 24px;
   }
-  #topic .box-topic .child .topic-group .topic-desc, #topic-web_trader .box-topic .child .topic-group .topic-desc, #topic-trading_platforms .box-topic .child .topic-group .topic-desc, #topic-stock .box-topic .child .topic-group .topic-desc, #topic-glossary .box-topic .child .topic-group .topic-desc, #topic-learn .box-topic .child .topic-group .topic-desc {
+  #topic .box-topic .child .topic-group .topic-desc, #topic-faqs .box-topic .child .topic-group .topic-desc, #topic-about_us .box-topic .child .topic-group .topic-desc, #topic-contact .box-topic .child .topic-group .topic-desc, #topic-payment_methods .box-topic .child .topic-group .topic-desc, #topic-trading_platforms .box-topic .child .topic-group .topic-desc, #topic-commodities .box-topic .child .topic-group .topic-desc, #topic-indices .box-topic .child .topic-group .topic-desc, #topic-forex .box-topic .child .topic-group .topic-desc, #topic-stock .box-topic .child .topic-group .topic-desc, #topic-glossary .box-topic .child .topic-group .topic-desc, #topic-learn .box-topic .child .topic-group .topic-desc {
     text-align: center;
     font-size: 20px;
     margin-bottom: 40px;
   }
-  #topic .box-topic .child .topic-group .topic-btn, #topic-web_trader .box-topic .child .topic-group .topic-btn, #topic-trading_platforms .box-topic .child .topic-group .topic-btn, #topic-stock .box-topic .child .topic-group .topic-btn, #topic-glossary .box-topic .child .topic-group .topic-btn, #topic-learn .box-topic .child .topic-group .topic-btn {
+  #topic .box-topic .child .topic-group .topic-btn, #topic-faqs .box-topic .child .topic-group .topic-btn, #topic-about_us .box-topic .child .topic-group .topic-btn, #topic-contact .box-topic .child .topic-group .topic-btn, #topic-payment_methods .box-topic .child .topic-group .topic-btn, #topic-trading_platforms .box-topic .child .topic-group .topic-btn, #topic-commodities .box-topic .child .topic-group .topic-btn, #topic-indices .box-topic .child .topic-group .topic-btn, #topic-forex .box-topic .child .topic-group .topic-btn, #topic-stock .box-topic .child .topic-group .topic-btn, #topic-glossary .box-topic .child .topic-group .topic-btn, #topic-learn .box-topic .child .topic-group .topic-btn {
     width: 280px;
     margin: 0 auto;
   }
@@ -1898,6 +1902,10 @@ p {
   color: var(--c-red);
   font-weight: bold;
   font-size: 18px;
+}
+#news-list .box-list .item .item-title a {
+  color: inherit;
+  text-decoration: none;
 }
 #news-list .box-list .item .item-desc {
   color: var(--c-text);
@@ -1946,6 +1954,10 @@ p {
   font-size: 16px;
   font-weight: bold;
 }
+#news-guide .news-guide-box .child .list .item .item-content .title a {
+  color: inherit;
+  text-decoration: none;
+}
 #news-guide .news-guide-box .child .list .item .item-content .time {
   font-size: 16px;
   font-style: italic;
@@ -1978,8 +1990,6 @@ p {
   #news-guide {
     margin: 60px 0;
   }
-}
-@media (max-width: 600.98px) {
   #news-guide .news-guide-box {
     grid-template-columns: 1fr;
     gap: 70px;
@@ -2056,6 +2066,9 @@ p {
   }
 }
 @media (max-width: 800.98px) {
+  #start_trading {
+    margin-bottom: 140px;
+  }
   #start_trading .start_trading-title {
     text-align: center;
   }
@@ -2367,214 +2380,214 @@ p {
   }
 }
 
-#stocks {
+#stocks, #commodities, #indices, #forex {
   padding-top: 80px;
 }
-#stocks .stocks-head {
+#stocks .stocks-head, #commodities .stocks-head, #indices .stocks-head, #forex .stocks-head {
   display: flex;
   margin-bottom: 70px;
 }
-#stocks .stocks-head .child {
+#stocks .stocks-head .child, #commodities .stocks-head .child, #indices .stocks-head .child, #forex .stocks-head .child {
   width: 50%;
 }
-#stocks .stocks-head .child .stocks-img {
+#stocks .stocks-head .child .stocks-img, #commodities .stocks-head .child .stocks-img, #indices .stocks-head .child .stocks-img, #forex .stocks-head .child .stocks-img {
   padding-left: 70px;
 }
-#stocks .stocks-head .child .box-title {
+#stocks .stocks-head .child .box-title, #commodities .stocks-head .child .box-title, #indices .stocks-head .child .box-title, #forex .stocks-head .child .box-title {
   padding-top: 32px;
 }
-#stocks .stocks-head .child .box-title .box-title__title {
+#stocks .stocks-head .child .box-title .box-title__title, #commodities .stocks-head .child .box-title .box-title__title, #indices .stocks-head .child .box-title .box-title__title, #forex .stocks-head .child .box-title .box-title__title {
   font-size: 46px;
   line-height: 1;
   margin-bottom: 64px;
 }
-#stocks .stocks-head .child .box-title .box-title__title span {
+#stocks .stocks-head .child .box-title .box-title__title span, #commodities .stocks-head .child .box-title .box-title__title span, #indices .stocks-head .child .box-title .box-title__title span, #forex .stocks-head .child .box-title .box-title__title span {
   color: var(--c-red);
 }
-#stocks .stocks-head .child .box-title .box-title__desc {
+#stocks .stocks-head .child .box-title .box-title__desc, #commodities .stocks-head .child .box-title .box-title__desc, #indices .stocks-head .child .box-title .box-title__desc, #forex .stocks-head .child .box-title .box-title__desc {
   line-height: 30px;
 }
-#stocks .stocks-head .child .list .item:not(#stocks .stocks-head .child .list .item:last-child) {
+#stocks .stocks-head .child .list .item:not(#stocks .stocks-head .child .list .item:last-child):not(#commodities .stocks-head .child .list .item:last-child):not(#indices .stocks-head .child .list .item:last-child):not(#forex .stocks-head .child .list .item:last-child), #commodities .stocks-head .child .list .item:not(#stocks .stocks-head .child .list .item:last-child):not(#commodities .stocks-head .child .list .item:last-child):not(#indices .stocks-head .child .list .item:last-child):not(#forex .stocks-head .child .list .item:last-child), #indices .stocks-head .child .list .item:not(#stocks .stocks-head .child .list .item:last-child):not(#commodities .stocks-head .child .list .item:last-child):not(#indices .stocks-head .child .list .item:last-child):not(#forex .stocks-head .child .list .item:last-child), #forex .stocks-head .child .list .item:not(#stocks .stocks-head .child .list .item:last-child):not(#commodities .stocks-head .child .list .item:last-child):not(#indices .stocks-head .child .list .item:last-child):not(#forex .stocks-head .child .list .item:last-child) {
   margin-bottom: 40px;
 }
-#stocks .stocks-head .child .list .item .title {
+#stocks .stocks-head .child .list .item .title, #commodities .stocks-head .child .list .item .title, #indices .stocks-head .child .list .item .title, #forex .stocks-head .child .list .item .title {
   font-size: 20px;
   font-weight: bold;
   line-height: 30px;
 }
-#stocks .stocks-head .child .list .item .desc {
+#stocks .stocks-head .child .list .item .desc, #commodities .stocks-head .child .list .item .desc, #indices .stocks-head .child .list .item .desc, #forex .stocks-head .child .list .item .desc {
   font-size: 20px;
   line-height: 30px;
 }
-#stocks .stocks-stock {
+#stocks .stocks-stock, #commodities .stocks-stock, #indices .stocks-stock, #forex .stocks-stock {
   margin-bottom: 130px;
 }
-#stocks .stocks-stock .stocks-stock__img {
+#stocks .stocks-stock .stocks-stock__img, #commodities .stocks-stock .stocks-stock__img, #indices .stocks-stock .stocks-stock__img, #forex .stocks-stock .stocks-stock__img {
   margin-bottom: 30px;
   text-align: center;
 }
-#stocks .stocks-stock .stocks-stock__img img {
+#stocks .stocks-stock .stocks-stock__img img, #commodities .stocks-stock .stocks-stock__img img, #indices .stocks-stock .stocks-stock__img img, #forex .stocks-stock .stocks-stock__img img {
   width: 90%;
   height: auto;
 }
-#stocks .stocks-stock .stocks-stock__content {
+#stocks .stocks-stock .stocks-stock__content, #commodities .stocks-stock .stocks-stock__content, #indices .stocks-stock .stocks-stock__content, #forex .stocks-stock .stocks-stock__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 100px;
 }
-#stocks .stocks-stock .stocks-stock__content .child {
+#stocks .stocks-stock .stocks-stock__content .child, #commodities .stocks-stock .stocks-stock__content .child, #indices .stocks-stock .stocks-stock__content .child, #forex .stocks-stock .stocks-stock__content .child {
   display: flex;
   flex-direction: column;
 }
-#stocks .stocks-stock .stocks-stock__content .child .child-title {
+#stocks .stocks-stock .stocks-stock__content .child .child-title, #commodities .stocks-stock .stocks-stock__content .child .child-title, #indices .stocks-stock .stocks-stock__content .child .child-title, #forex .stocks-stock .stocks-stock__content .child .child-title {
   font-size: 25px;
   font-weight: bold;
   line-height: 30px;
   margin-bottom: 0;
 }
-#stocks .stocks-stock .stocks-stock__content .child .child-desc {
+#stocks .stocks-stock .stocks-stock__content .child .child-desc, #commodities .stocks-stock .stocks-stock__content .child .child-desc, #indices .stocks-stock .stocks-stock__content .child .child-desc, #forex .stocks-stock .stocks-stock__content .child .child-desc {
   font-size: 25px;
   line-height: 30px;
   margin-bottom: 60px;
   white-space: pre-line;
 }
-#stocks .stocks-stock .stocks-stock__content .child .child-img {
+#stocks .stocks-stock .stocks-stock__content .child .child-img, #commodities .stocks-stock .stocks-stock__content .child .child-img, #indices .stocks-stock .stocks-stock__content .child .child-img, #forex .stocks-stock .stocks-stock__content .child .child-img {
   margin-top: auto;
   text-align: center;
 }
 @media (max-width: 1450.98px) {
-  #stocks .stocks-head .child .stocks-img img {
+  #stocks .stocks-head .child .stocks-img img, #commodities .stocks-head .child .stocks-img img, #indices .stocks-head .child .stocks-img img, #forex .stocks-head .child .stocks-img img {
     width: 110%;
   }
-  #stocks .stocks-stock .stocks-stock__img {
+  #stocks .stocks-stock .stocks-stock__img, #commodities .stocks-stock .stocks-stock__img, #indices .stocks-stock .stocks-stock__img, #forex .stocks-stock .stocks-stock__img {
     margin-bottom: 30px;
   }
-  #stocks .stocks-stock .stocks-stock__img img {
+  #stocks .stocks-stock .stocks-stock__img img, #commodities .stocks-stock .stocks-stock__img img, #indices .stocks-stock .stocks-stock__img img, #forex .stocks-stock .stocks-stock__img img {
     width: 80%;
     height: auto;
   }
 }
 @media (max-width: 1000.98px) {
-  #stocks {
+  #stocks, #commodities, #indices, #forex {
     padding-top: 40px;
   }
-  #stocks .stocks-head .child .stocks-img img {
+  #stocks .stocks-head .child .stocks-img img, #commodities .stocks-head .child .stocks-img img, #indices .stocks-head .child .stocks-img img, #forex .stocks-head .child .stocks-img img {
     width: 100%;
   }
-  #stocks .stocks-stock {
+  #stocks .stocks-stock, #commodities .stocks-stock, #indices .stocks-stock, #forex .stocks-stock {
     margin-bottom: 80px;
   }
-  #stocks .stocks-stock .stocks-stock__img {
+  #stocks .stocks-stock .stocks-stock__img, #commodities .stocks-stock .stocks-stock__img, #indices .stocks-stock .stocks-stock__img, #forex .stocks-stock .stocks-stock__img {
     margin-bottom: 0;
   }
-  #stocks .stocks-stock .stocks-stock__content {
+  #stocks .stocks-stock .stocks-stock__content, #commodities .stocks-stock .stocks-stock__content, #indices .stocks-stock .stocks-stock__content, #forex .stocks-stock .stocks-stock__content {
     gap: 40px;
   }
-  #stocks .stocks-stock .stocks-stock__content .child .child-desc {
+  #stocks .stocks-stock .stocks-stock__content .child .child-desc, #commodities .stocks-stock .stocks-stock__content .child .child-desc, #indices .stocks-stock .stocks-stock__content .child .child-desc, #forex .stocks-stock .stocks-stock__content .child .child-desc {
     margin-bottom: 20px;
   }
-  #stocks .stocks-stock .stocks-stock__content .child .child-img img {
+  #stocks .stocks-stock .stocks-stock__content .child .child-img img, #commodities .stocks-stock .stocks-stock__content .child .child-img img, #indices .stocks-stock .stocks-stock__content .child .child-img img, #forex .stocks-stock .stocks-stock__content .child .child-img img {
     width: 80%;
   }
 }
 @media (max-width: 800.98px) {
-  #stocks .stocks-head {
+  #stocks .stocks-head, #commodities .stocks-head, #indices .stocks-head, #forex .stocks-head {
     flex-direction: column-reverse;
   }
-  #stocks .stocks-head .child {
+  #stocks .stocks-head .child, #commodities .stocks-head .child, #indices .stocks-head .child, #forex .stocks-head .child {
     width: 100%;
   }
-  #stocks .stocks-head .child .stocks-img {
+  #stocks .stocks-head .child .stocks-img, #commodities .stocks-head .child .stocks-img, #indices .stocks-head .child .stocks-img, #forex .stocks-head .child .stocks-img {
     width: 80%;
   }
-  #stocks .stocks-stock .stocks-stock__img {
+  #stocks .stocks-stock .stocks-stock__img, #commodities .stocks-stock .stocks-stock__img, #indices .stocks-stock .stocks-stock__img, #forex .stocks-stock .stocks-stock__img {
     margin-bottom: 30px;
     text-align: center;
   }
-  #stocks .stocks-stock .stocks-stock__img img {
+  #stocks .stocks-stock .stocks-stock__img img, #commodities .stocks-stock .stocks-stock__img img, #indices .stocks-stock .stocks-stock__img img, #forex .stocks-stock .stocks-stock__img img {
     width: 90%;
     height: auto;
   }
-  #stocks .stocks-stock .stocks-stock__content {
+  #stocks .stocks-stock .stocks-stock__content, #commodities .stocks-stock .stocks-stock__content, #indices .stocks-stock .stocks-stock__content, #forex .stocks-stock .stocks-stock__content {
     grid-template-columns: 1fr;
     gap: 60px;
   }
 }
 
-#stock-why {
+#stock-why, #commodities-why, #ways-to, #ways-to-commodities, #forex-why {
   margin-bottom: 180px;
 }
-#stock-why .stock-why-list {
+#stock-why .stock-why-list, #commodities-why .stock-why-list, #ways-to .stock-why-list, #ways-to-commodities .stock-why-list, #forex-why .stock-why-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-#stock-why .stock-why-list .child:last-child {
+#stock-why .stock-why-list .child:last-child, #commodities-why .stock-why-list .child:last-child, #ways-to .stock-why-list .child:last-child, #ways-to-commodities .stock-why-list .child:last-child, #forex-why .stock-why-list .child:last-child {
   padding-left: 40px;
 }
-#stock-why .stock-why-list .child .stock-why-img {
+#stock-why .stock-why-list .child .stock-why-img, #commodities-why .stock-why-list .child .stock-why-img, #ways-to .stock-why-list .child .stock-why-img, #ways-to-commodities .stock-why-list .child .stock-why-img, #forex-why .stock-why-list .child .stock-why-img {
   width: 100%;
   height: 100%;
   position: relative;
 }
-#stock-why .stock-why-list .child .stock-why-img img {
+#stock-why .stock-why-list .child .stock-why-img img, #commodities-why .stock-why-list .child .stock-why-img img, #ways-to .stock-why-list .child .stock-why-img img, #ways-to-commodities .stock-why-list .child .stock-why-img img, #forex-why .stock-why-list .child .stock-why-img img {
   position: absolute;
   right: 40px;
   top: 50%;
   transform: translateY(-50%);
 }
-#stock-why .stock-why-list .child .box-title .box-title__title {
+#stock-why .stock-why-list .child .box-title .box-title__title, #commodities-why .stock-why-list .child .box-title .box-title__title, #ways-to .stock-why-list .child .box-title .box-title__title, #ways-to-commodities .stock-why-list .child .box-title .box-title__title, #forex-why .stock-why-list .child .box-title .box-title__title {
   font-size: 40px;
   line-height: 1;
   margin-bottom: 16px;
 }
-#stock-why .stock-why-list .child .box-title .box-title__subtitle {
+#stock-why .stock-why-list .child .box-title .box-title__subtitle, #commodities-why .stock-why-list .child .box-title .box-title__subtitle, #ways-to .stock-why-list .child .box-title .box-title__subtitle, #ways-to-commodities .stock-why-list .child .box-title .box-title__subtitle, #forex-why .stock-why-list .child .box-title .box-title__subtitle {
   font-size: 40px;
   margin-bottom: 50px;
 }
-#stock-why .stock-why-list .child .list .item:not(#stock-why .stock-why-list .child .list .item:last-child) {
+#stock-why .stock-why-list .child .list .item:not(#stock-why .stock-why-list .child .list .item:last-child):not(#commodities-why .stock-why-list .child .list .item:last-child):not(#ways-to .stock-why-list .child .list .item:last-child):not(#ways-to-commodities .stock-why-list .child .list .item:last-child):not(#forex-why .stock-why-list .child .list .item:last-child), #commodities-why .stock-why-list .child .list .item:not(#stock-why .stock-why-list .child .list .item:last-child):not(#commodities-why .stock-why-list .child .list .item:last-child):not(#ways-to .stock-why-list .child .list .item:last-child):not(#ways-to-commodities .stock-why-list .child .list .item:last-child):not(#forex-why .stock-why-list .child .list .item:last-child), #ways-to .stock-why-list .child .list .item:not(#stock-why .stock-why-list .child .list .item:last-child):not(#commodities-why .stock-why-list .child .list .item:last-child):not(#ways-to .stock-why-list .child .list .item:last-child):not(#ways-to-commodities .stock-why-list .child .list .item:last-child):not(#forex-why .stock-why-list .child .list .item:last-child), #ways-to-commodities .stock-why-list .child .list .item:not(#stock-why .stock-why-list .child .list .item:last-child):not(#commodities-why .stock-why-list .child .list .item:last-child):not(#ways-to .stock-why-list .child .list .item:last-child):not(#ways-to-commodities .stock-why-list .child .list .item:last-child):not(#forex-why .stock-why-list .child .list .item:last-child), #forex-why .stock-why-list .child .list .item:not(#stock-why .stock-why-list .child .list .item:last-child):not(#commodities-why .stock-why-list .child .list .item:last-child):not(#ways-to .stock-why-list .child .list .item:last-child):not(#ways-to-commodities .stock-why-list .child .list .item:last-child):not(#forex-why .stock-why-list .child .list .item:last-child) {
   margin-bottom: 40px;
 }
-#stock-why .stock-why-list .child .list .item .title {
+#stock-why .stock-why-list .child .list .item .title, #commodities-why .stock-why-list .child .list .item .title, #ways-to .stock-why-list .child .list .item .title, #ways-to-commodities .stock-why-list .child .list .item .title, #forex-why .stock-why-list .child .list .item .title {
   font-size: 20px;
   font-weight: bold;
   line-height: 30px;
 }
-#stock-why .stock-why-list .child .list .item .desc {
+#stock-why .stock-why-list .child .list .item .desc, #commodities-why .stock-why-list .child .list .item .desc, #ways-to .stock-why-list .child .list .item .desc, #ways-to-commodities .stock-why-list .child .list .item .desc, #forex-why .stock-why-list .child .list .item .desc {
   font-size: 20px;
   line-height: 30px;
 }
 @media (max-width: 1000.98px) {
-  #stock-why {
+  #stock-why, #commodities-why, #ways-to, #ways-to-commodities, #forex-why {
     margin-bottom: 80px;
   }
-  #stock-why .stock-why-list {
+  #stock-why .stock-why-list, #commodities-why .stock-why-list, #ways-to .stock-why-list, #ways-to-commodities .stock-why-list, #forex-why .stock-why-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  #stock-why .stock-why-list .child:last-child {
+  #stock-why .stock-why-list .child:last-child, #commodities-why .stock-why-list .child:last-child, #ways-to .stock-why-list .child:last-child, #ways-to-commodities .stock-why-list .child:last-child, #forex-why .stock-why-list .child:last-child {
     padding-left: 20px;
   }
-  #stock-why .stock-why-list .child .stock-why-img img {
+  #stock-why .stock-why-list .child .stock-why-img img, #commodities-why .stock-why-list .child .stock-why-img img, #ways-to .stock-why-list .child .stock-why-img img, #ways-to-commodities .stock-why-list .child .stock-why-img img, #forex-why .stock-why-list .child .stock-why-img img {
     width: 100%;
     right: 20px;
   }
 }
 @media (max-width: 800.98px) {
-  #stock-why {
+  #stock-why, #commodities-why, #ways-to, #ways-to-commodities, #forex-why {
     margin-bottom: 80px;
   }
-  #stock-why .stock-why-list {
+  #stock-why .stock-why-list, #commodities-why .stock-why-list, #ways-to .stock-why-list, #ways-to-commodities .stock-why-list, #forex-why .stock-why-list {
     grid-template-columns: 1fr;
     gap: 60px;
   }
-  #stock-why .stock-why-list .child {
+  #stock-why .stock-why-list .child, #commodities-why .stock-why-list .child, #ways-to .stock-why-list .child, #ways-to-commodities .stock-why-list .child, #forex-why .stock-why-list .child {
     order: 2;
   }
-  #stock-why .stock-why-list .child:last-child {
+  #stock-why .stock-why-list .child:last-child, #commodities-why .stock-why-list .child:last-child, #ways-to .stock-why-list .child:last-child, #ways-to-commodities .stock-why-list .child:last-child, #forex-why .stock-why-list .child:last-child {
     padding-left: 0;
     order: 1;
   }
-  #stock-why .stock-why-list .child .stock-why-img img {
+  #stock-why .stock-why-list .child .stock-why-img img, #commodities-why .stock-why-list .child .stock-why-img img, #ways-to .stock-why-list .child .stock-why-img img, #ways-to-commodities .stock-why-list .child .stock-why-img img, #forex-why .stock-why-list .child .stock-why-img img {
     width: 80%;
     transform: unset;
     position: unset;
@@ -2643,80 +2656,510 @@ p {
   }
 }
 
-#commodities {
-  padding-top: 80px;
+#topic-forex .box-topic {
+  gap: 0;
 }
-#commodities .commodities-head {
+#topic-forex .box-topic .child .topic-img {
+  width: calc(100% + 40px);
+  mix-blend-mode: multiply;
+}
+#topic-forex .box-topic .child:last-child {
+  padding-left: 100px;
+}
+#topic-forex .box-topic .child .topic-group {
+  margin-bottom: 32px;
+}
+#topic-forex .box-topic .child .topic-group .topic-desc {
+  width: calc(100% + 70px);
+  margin-bottom: 50px;
+}
+@media (max-width: 1250.98px) {
+  #topic-forex .box-topic .child .topic-group .topic-desc {
+    width: 100%;
+  }
+}
+@media (max-width: 1000.98px) {
+  #topic-forex .box-topic .child:last-child {
+    padding-left: 60px;
+  }
+}
+@media (max-width: 800.98px) {
+  #topic-forex .box-topic {
+    gap: 40px;
+  }
+  #topic-forex .box-topic .child .topic-img {
+    width: 60%;
+    text-align: center;
+  }
+  #topic-forex .box-topic .child:last-child {
+    padding-left: 0px;
+  }
+}
+
+#forex {
+  padding-top: 150px;
+  margin-bottom: 120px;
+}
+#forex .stocks-head {
   display: flex;
-  margin-bottom: 70px;
+  margin-bottom: 0;
 }
-#commodities .commodities-head .child {
+#forex .stocks-head .child {
   width: 50%;
 }
-#commodities .commodities-head .child .commodities-img {
-  padding-left: 70px;
+#forex .stocks-head .child .stocks-img {
+  padding-left: 190px;
+  padding-top: 50px;
 }
-#commodities .commodities-head .child .box-title {
-  padding-top: 32px;
+#forex .stocks-head .child .box-title {
+  padding-top: 0;
 }
-#commodities .commodities-head .child .box-title .box-title__title {
+#forex .stocks-head .child .box-title .box-title__title {
   font-size: 46px;
   line-height: 1;
   margin-bottom: 64px;
 }
-#commodities .commodities-head .child .box-title .box-title__title span {
+#forex .stocks-head .child .box-title .box-title__title span {
   color: var(--c-red);
 }
-#commodities .commodities-head .child .box-title .box-title__desc {
+#forex .stocks-head .child .box-title .box-title__desc {
   line-height: 30px;
 }
-#commodities .commodities-head .child .list .item:not(#commodities .commodities-head .child .list .item:last-child) {
+#forex .stocks-head .child .list .item:not(#forex .stocks-head .child .list .item:last-child) {
   margin-bottom: 40px;
 }
-#commodities .commodities-head .child .list .item .title {
+#forex .stocks-head .child .list .item .title {
   font-size: 20px;
   font-weight: bold;
   line-height: 30px;
 }
-#commodities .commodities-head .child .list .item .desc {
+#forex .stocks-head .child .list .item .desc {
   font-size: 20px;
   line-height: 30px;
 }
-#commodities .commodities-stock {
-  margin-bottom: 130px;
+@media (max-width: 1450.98px) {
+  #forex .stocks-head .child .stocks-img img {
+    width: 110%;
+  }
 }
-#commodities .commodities-stock .commodities-stock__img {
-  margin-bottom: 30px;
+@media (max-width: 1000.98px) {
+  #forex {
+    padding-top: 40px;
+  }
+  #forex .stocks-head .child .stocks-img {
+    padding-left: 70px;
+  }
+  #forex .stocks-head .child .stocks-img img {
+    width: 100%;
+  }
 }
-#commodities .commodities-stock .commodities-stock__img img {
-  width: 90%;
-  height: auto;
+@media (max-width: 800.98px) {
+  #forex .stocks-head {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  #forex .stocks-head .child {
+    width: 100%;
+  }
+  #forex .stocks-head .child .stocks-img {
+    padding-left: 0;
+    margin: 0 auto;
+    width: 60%;
+  }
 }
-#commodities .commodities-stock .commodities-stock__content {
+
+#forex-why {
+  margin-bottom: 170px;
+}
+#forex-why .stock-why-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 100px;
+  grid-template-columns: repeat(2, 1fr);
 }
-#commodities .commodities-stock .commodities-stock__content .child {
-  display: flex;
-  flex-direction: column;
+#forex-why .stock-why-list .child:last-child {
+  padding-left: 40px;
 }
-#commodities .commodities-stock .commodities-stock__content .child .child-title {
-  font-size: 25px;
+#forex-why .stock-why-list .child .stock-why-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#forex-why .stock-why-list .child .stock-why-img img {
+  position: absolute;
+  right: 60px;
+  top: 0;
+  transform: unset;
+}
+#forex-why .stock-why-list .child .box-title .box-title__title {
+  font-size: 40px;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+#forex-why .stock-why-list .child .box-title .box-title__subtitle {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+#forex-why .stock-why-list .child .list .item:not(#forex-why .stock-why-list .child .list .item:last-child) {
+  margin-bottom: 40px;
+}
+#forex-why .stock-why-list .child .list .item .title {
+  font-size: 20px;
   font-weight: bold;
   line-height: 30px;
+}
+#forex-why .stock-why-list .child .list .item .desc {
+  font-size: 20px;
+  line-height: 30px;
+}
+@media (max-width: 1000.98px) {
+  #forex-why {
+    margin-bottom: 80px;
+  }
+  #forex-why .stock-why-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #forex-why .stock-why-list .child:last-child {
+    padding-left: 20px;
+  }
+  #forex-why .stock-why-list .child .stock-why-img img {
+    width: 100%;
+    right: 20px;
+  }
+}
+@media (max-width: 800.98px) {
+  #forex-why {
+    margin-bottom: 80px;
+  }
+  #forex-why .stock-why-list {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  #forex-why .stock-why-list .child {
+    order: 2;
+  }
+  #forex-why .stock-why-list .child:last-child {
+    padding-left: 0;
+    order: 1;
+  }
+  #forex-why .stock-why-list .child .stock-why-img img {
+    width: 80%;
+    transform: unset;
+    position: unset;
+  }
+}
+
+#topic-indices .box-topic {
+  gap: 0;
+}
+#topic-indices .box-topic .child .topic-img {
+  width: calc(100% + 40px);
+  mix-blend-mode: multiply;
+}
+#topic-indices .box-topic .child:last-child {
+  padding-left: 110px;
+}
+#topic-indices .box-topic .child .topic-group {
+  margin-bottom: 32px;
+}
+#topic-indices .box-topic .child .topic-group .topic-desc {
+  width: calc(100% + 50px);
+  margin-bottom: 50px;
+}
+@media (max-width: 1250.98px) {
+  #topic-indices .box-topic .child .topic-group .topic-desc {
+    width: 100%;
+  }
+}
+@media (max-width: 1000.98px) {
+  #topic-indices .box-topic .child:last-child {
+    padding-left: 60px;
+  }
+}
+@media (max-width: 800.98px) {
+  #topic-indices .box-topic {
+    gap: 40px;
+  }
+  #topic-indices .box-topic .child .topic-img {
+    width: 60%;
+    text-align: center;
+  }
+  #topic-indices .box-topic .child:last-child {
+    padding-left: 0px;
+  }
+}
+
+#indices {
+  padding-top: 80px;
+  margin-bottom: 240px;
+}
+#indices .stocks-head {
+  display: flex;
   margin-bottom: 0;
 }
-#commodities .commodities-stock .commodities-stock__content .child .child-desc {
-  font-size: 25px;
+#indices .stocks-head .child {
+  width: 50%;
+}
+#indices .stocks-head .child .stocks-img {
+  padding-left: 70px;
+}
+#indices .stocks-head .child .box-title {
+  padding-top: 32px;
+}
+#indices .stocks-head .child .box-title .box-title__title {
+  font-size: 46px;
+  line-height: 1;
+  margin-bottom: 64px;
+}
+#indices .stocks-head .child .box-title .box-title__title span {
+  color: var(--c-red);
+}
+#indices .stocks-head .child .box-title .box-title__desc {
   line-height: 30px;
-  margin-bottom: 60px;
-  white-space: pre-line;
 }
-#commodities .commodities-stock .commodities-stock__content .child .child-img {
-  margin-top: auto;
-  text-align: center;
+#indices .stocks-head .child .list .item:not(#indices .stocks-head .child .list .item:last-child) {
+  margin-bottom: 40px;
 }
+#indices .stocks-head .child .list .item .title {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+}
+#indices .stocks-head .child .list .item .desc {
+  font-size: 20px;
+  line-height: 30px;
+}
+@media (max-width: 1450.98px) {
+  #indices .stocks-head .child .stocks-img img {
+    width: 110%;
+  }
+}
+@media (max-width: 1000.98px) {
+  #indices {
+    padding-top: 40px;
+    margin-bottom: 160px;
+  }
+  #indices .stocks-head .child .stocks-img img {
+    width: 100%;
+  }
+}
+@media (max-width: 800.98px) {
+  #indices {
+    margin-bottom: 80px;
+  }
+  #indices .stocks-head {
+    flex-direction: column-reverse;
+  }
+  #indices .stocks-head .child {
+    width: 100%;
+  }
+  #indices .stocks-head .child .stocks-img {
+    width: 80%;
+  }
+}
+
+#ways-to, #ways-to-commodities {
+  margin-bottom: 300px !important;
+}
+#ways-to .stock-why-list, #ways-to-commodities .stock-why-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#ways-to .stock-why-list .child:last-child, #ways-to-commodities .stock-why-list .child:last-child {
+  padding-left: 0;
+}
+#ways-to .stock-why-list .child .stock-why-img, #ways-to-commodities .stock-why-list .child .stock-why-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#ways-to .stock-why-list .child .stock-why-img img, #ways-to-commodities .stock-why-list .child .stock-why-img img {
+  position: absolute;
+  right: 90px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#ways-to .stock-why-list .child .box-title .box-title__title, #ways-to-commodities .stock-why-list .child .box-title .box-title__title {
+  margin-bottom: 0 !important;
+}
+#ways-to .stock-why-list .child .box-title .box-title__subtitle, #ways-to-commodities .stock-why-list .child .box-title .box-title__subtitle {
+  margin-bottom: 10px !important;
+}
+@media (max-width: 1000.98px) {
+  #ways-to, #ways-to-commodities {
+    margin-bottom: 100px !important;
+  }
+  #ways-to .stock-why-list, #ways-to-commodities .stock-why-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #ways-to .stock-why-list .child:last-child, #ways-to-commodities .stock-why-list .child:last-child {
+    padding-left: 20px;
+  }
+  #ways-to .stock-why-list .child .stock-why-img img, #ways-to-commodities .stock-why-list .child .stock-why-img img {
+    width: 100%;
+    right: 20px;
+  }
+}
+@media (max-width: 800.98px) {
+  #ways-to, #ways-to-commodities {
+    margin-bottom: 80px;
+  }
+  #ways-to .stock-why-list, #ways-to-commodities .stock-why-list {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  #ways-to .stock-why-list .child, #ways-to-commodities .stock-why-list .child {
+    order: 2;
+  }
+  #ways-to .stock-why-list .child:last-child, #ways-to-commodities .stock-why-list .child:last-child {
+    padding-left: 0;
+    order: 1;
+  }
+  #ways-to .stock-why-list .child .stock-why-img, #ways-to-commodities .stock-why-list .child .stock-why-img {
+    text-align: center;
+  }
+  #ways-to .stock-why-list .child .stock-why-img img, #ways-to-commodities .stock-why-list .child .stock-why-img img {
+    width: 80%;
+    transform: unset;
+    position: unset;
+  }
+}
+
+#topic-commodities .box-topic {
+  gap: 0;
+}
+#topic-commodities .box-topic .child .topic-img {
+  width: calc(100% + 70px);
+  margin-left: -67px;
+  mix-blend-mode: multiply;
+}
+#topic-commodities .box-topic .child:last-child {
+  padding-left: 110px;
+}
+#topic-commodities .box-topic .child .topic-group {
+  margin-bottom: 32px;
+}
+#topic-commodities .box-topic .child .topic-group .topic-desc {
+  width: calc(100% + 80px);
+  margin-bottom: 50px;
+}
+@media (max-width: 1250.98px) {
+  #topic-commodities .box-topic .child .topic-group .topic-desc {
+    width: 100%;
+  }
+}
+@media (max-width: 1000.98px) {
+  #topic-commodities .box-topic .child:last-child {
+    padding-left: 60px;
+  }
+}
+@media (max-width: 800.98px) {
+  #topic-commodities .box-topic {
+    gap: 40px;
+  }
+  #topic-commodities .box-topic .child .topic-img {
+    width: 60%;
+    text-align: center;
+  }
+  #topic-commodities .box-topic .child:last-child {
+    padding-left: 0px;
+  }
+}
+
+#commodities {
+  padding-top: 80px;
+  margin-bottom: 240px;
+}
+#commodities .stocks-head {
+  display: flex;
+  margin-bottom: 0;
+}
+#commodities .stocks-head .child {
+  width: 50%;
+}
+#commodities .stocks-head .child .stocks-img {
+  padding-left: 70px;
+}
+#commodities .stocks-head .child .box-title {
+  padding-top: 32px;
+}
+#commodities .stocks-head .child .box-title .box-title__title {
+  font-size: 46px;
+  line-height: 1;
+  margin-bottom: 64px;
+}
+#commodities .stocks-head .child .box-title .box-title__title span {
+  color: var(--c-red);
+}
+#commodities .stocks-head .child .box-title .box-title__desc {
+  line-height: 30px;
+}
+#commodities .stocks-head .child .list .item:not(#commodities .stocks-head .child .list .item:last-child) {
+  margin-bottom: 40px;
+}
+#commodities .stocks-head .child .list .item .title {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+}
+#commodities .stocks-head .child .list .item .desc {
+  font-size: 20px;
+  line-height: 30px;
+}
+@media (max-width: 1450.98px) {
+  #commodities .stocks-head .child .stocks-img img {
+    width: 110%;
+  }
+}
+@media (max-width: 1200.98px) {
+  #commodities .stocks-head .child .stocks-img img {
+    width: 100%;
+  }
+}
+@media (max-width: 1000.98px) {
+  #commodities {
+    padding-top: 40px;
+    margin-bottom: 160px;
+  }
+  #commodities .stocks-head .child .stocks-img img {
+    width: 100%;
+  }
+}
+@media (max-width: 800.98px) {
+  #commodities {
+    margin-bottom: 80px;
+  }
+  #commodities .stocks-head {
+    flex-direction: column-reverse;
+  }
+  #commodities .stocks-head .child {
+    width: 100%;
+  }
+  #commodities .stocks-head .child .stocks-img {
+    width: 80%;
+  }
+}
+
+#ways-to-commodities .stock-why-list .child:last-child {
+  padding-left: 80px;
+}
+#ways-to-commodities .stock-why-list .child .stock-why-img img {
+  right: 20px;
+}
+#ways-to-commodities .stock-why-list .child .box-title .box-title__subtitle {
+  margin-bottom: 60px !important;
+}
+
+#commodities-why .stock-why-list .child .box-title .box-title__title {
+  width: calc(100% + 40px);
+}
+@media (max-width: 1200.98px) {
+  #commodities-why .stock-why-list .child .box-title .box-title__title {
+    width: 100%;
+    line-height: 50px;
+  }
+}
+
 #topic-trading_platforms .box-topic {
   gap: 0;
 }
@@ -2979,20 +3422,417 @@ p {
   }
 }
 
-#topic-web_trader .box-topic {
+#topic-payment_methods {
+  padding: 120px 0 130px;
+}
+#topic-payment_methods .box-topic {
   gap: 0;
 }
-#topic-web_trader .box-topic .child .topic-img {
+#topic-payment_methods .box-topic .child .topic-img {
+  width: 100%;
+  mix-blend-mode: multiply;
+  padding-right: 120px;
+}
+#topic-payment_methods .box-topic .child:last-child {
+  padding-left: 16px;
+}
+@media (max-width: 1000.98px) {
+  #topic-payment_methods .box-topic .child .topic-img {
+    padding-right: 40px;
+  }
+}
+@media (max-width: 800.98px) {
+  #topic-payment_methods {
+    padding: 30px 0 60px;
+  }
+  #topic-payment_methods .box-topic {
+    gap: 40px;
+  }
+  #topic-payment_methods .box-topic .child .topic-img {
+    width: 60%;
+  }
+  #topic-payment_methods .box-topic .child .topic-group {
+    padding-left: 0;
+    width: 100%;
+  }
+}
+
+#payment_methods {
+  padding: 130px 0 320px;
+}
+#payment_methods .box-payment_methods {
+  padding-left: 250px;
+}
+#payment_methods .box-payment_methods .child {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 50px;
+}
+#payment_methods .box-payment_methods .child:not(#payment_methods .box-payment_methods .child:last-child) {
+  margin-bottom: 120px;
+}
+#payment_methods .box-payment_methods .child .payment_methods__content .payment_methods__content-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#payment_methods .box-payment_methods .child .payment_methods__content .payment_methods__content-desc {
+  font-size: 20px;
+  line-height: 35px;
+}
+@media (max-width: 1000.98px) {
+  #payment_methods .box-payment_methods {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 800.98px) {
+  #payment_methods {
+    padding: 60px 0 140px;
+  }
+  #payment_methods .box-payment_methods {
+    padding: 0 20px;
+  }
+  #payment_methods .box-payment_methods .child {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+  #payment_methods .box-payment_methods .child:not(#payment_methods .box-payment_methods .child:last-child) {
+    margin-bottom: 50px;
+  }
+  #payment_methods .box-payment_methods .child .payment_methods__img {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #payment_methods .box-payment_methods .child .payment_methods__content .payment_methods__content-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  #payment_methods .box-payment_methods .child .payment_methods__content .payment_methods__content-desc {
+    font-size: 20px;
+    line-height: 35px;
+  }
+}
+
+#topic-about_us .box-topic .child .topic-img {
+  margin-left: -70px;
+}
+
+#about_us {
+  padding-top: 120px;
+}
+#about_us .about_us__head {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-end;
+  margin-bottom: 100px;
+}
+#about_us .about_us__head .child {
+  position: relative;
+}
+#about_us .about_us__head .child .box-title .box-title__title {
+  font-size: 40px;
+  color: var(--c-text);
+  font-weight: bold;
+}
+#about_us .about_us__head .child .box-title .box-title__title span {
+  color: var(--c-red);
+}
+#about_us .about_us__head .child .box-title .box-title__subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+  color: var(--c-text);
+}
+#about_us .about_us__head .child .box-title .box-title__desc {
+  font-size: 20px;
+  line-height: 30px;
+}
+#about_us .about_us__head .child .child-img {
+  position: absolute;
+  left: 120px;
+  bottom: 0;
+}
+#about_us .our_mission {
+  margin-bottom: 115px;
+}
+#about_us .our_mission .our_mission-img {
+  text-align: center;
+}
+#about_us .our_mission .our_mission-content {
+  text-align: center;
+}
+#about_us .our_mission .our_mission-content .our_mission-content__title {
+  font-size: 34px;
+  color: var(--c-red);
+  font-weight: bold;
+  margin-bottom: 56px;
+}
+#about_us .our_mission .our_mission-content .our_mission-content__desc {
+  font-size: 20px;
+  white-space: pre-line;
+}
+#about_us .reasons_to .reasons_to-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 45px;
+  margin-bottom: 60px;
+}
+#about_us .reasons_to .reasons_to-title span {
+  color: var(--c-red);
+  display: block;
+}
+#about_us .reasons_to .list-custom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 70px 50px;
+}
+#about_us .reasons_to .list-custom .item {
+  grid-template-columns: 93px 1fr;
+  gap: 25px;
+}
+#about_us .reasons_to .list-custom .item .title {
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+#about_us .reasons_to .list-custom .item .content {
+  padding-top: 22px;
+}
+@media (max-width: 1400.98px) {
+  #about_us .about_us__head .child .child-img {
+    left: 40px;
+  }
+  #about_us .about_us__head .child .child-img img {
+    width: 100%;
+  }
+}
+@media (max-width: 800.98px) {
+  #about_us {
+    padding-top: 60px;
+  }
+  #about_us .about_us__head {
+    grid-template-columns: 1fr;
+    margin-bottom: 60px;
+    gap: 40px;
+  }
+  #about_us .about_us__head .child:first-child {
+    order: 2;
+  }
+  #about_us .about_us__head .child .child-img {
+    position: unset;
+    text-align: center;
+  }
+  #about_us .about_us__head .child .child-img img {
+    width: 60%;
+  }
+  #about_us .our_mission {
+    margin-bottom: 60px;
+  }
+  #about_us .our_mission .our_mission-img img {
+    width: 70%;
+  }
+  #about_us .our_mission .our_mission-content {
+    text-align: center;
+  }
+  #about_us .our_mission .our_mission-content .our_mission-content__title {
+    margin-bottom: 32px;
+  }
+  #about_us .reasons_to .reasons_to-title {
+    margin-bottom: 40px;
+  }
+  #about_us .reasons_to .list-custom {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  #about_us .reasons_to .list-custom .item .title {
+    margin-bottom: 20px;
+  }
+}
+
+#topic-contact .box-topic {
+  gap: 0;
+}
+#topic-contact .box-topic .child .topic-img {
   width: 100%;
   mix-blend-mode: multiply;
 }
-#topic-web_trader .box-topic .child:last-child {
+#topic-contact .box-topic .child:last-child {
   padding-left: 90px;
 }
 
-#web_trader {
-  padding-top: 120px;
+#contact {
+  padding: 70px 0 190px;
 }
-#web_trader .web_trader-img {
-  width: 100%;
+#contact .box-contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px 30px;
+  border-radius: 25px;
+  filter: drop-shadow(0px 12px 25px rgba(58, 58, 58, 0.15));
+  background-color: var(--c-white);
+}
+#contact .box-contact .child:first-child {
+  padding-right: 60px;
+}
+#contact .box-contact .child .left {
+  background-color: var(--c-red);
+  border-radius: 12px;
+  padding: 20px;
+}
+#contact .box-contact .child .left .title {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--c-white);
+  margin-bottom: 40px;
+}
+#contact .box-contact .child .left .desc {
+  font-size: 19px;
+  color: var(--c-white);
+  margin-bottom: 90px;
+}
+#contact .box-contact .child .left .info .info-item {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 50px;
+}
+#contact .box-contact .child .left .info .info-item:not(#contact .box-contact .child .left .info .info-item:last-child) {
+  margin-bottom: 60px;
+}
+#contact .box-contact .child .left .info .info-item .info-item__text {
+  font-size: 19px;
+  color: var(--c-white);
+  line-height: 25px;
+  white-space: pre-line;
+}
+#contact .box-contact .child .contact-form .contact-form-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+#contact .box-contact .child .contact-form .form-group {
+  margin-bottom: 20px;
+}
+#contact .box-contact .child .contact-form .form-group .form-control {
+  height: 54px;
+  padding: 16px 0;
+  border-radius: unset;
+  border: unset;
+  border-bottom: 1px solid var(--c-gray);
+  font-size: 19px;
+}
+#contact .box-contact .child .contact-form .form-group .form-control:focus {
+  box-shadow: unset;
+}
+#contact .box-contact .child .contact-form .form-group .form-control::placeholder {
+  font-size: 19px;
+  font-style: italic;
+  color: var(--c-text);
+}
+#contact .box-contact .child .contact-form .form-group textarea.form-control {
+  height: 170px;
+}
+@media (max-width: 800.98px) {
+  #contact {
+    padding: 60px 0 160px;
+  }
+  #contact .box-contact {
+    grid-template-columns: 1fr;
+  }
+  #contact .box-contact .child:first-child {
+    padding-right: 0;
+  }
+  #contact .box-contact .child .left .title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  #contact .box-contact .child .left .desc {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  #contact .box-contact .child .left .info .info-item {
+    grid-template-columns: 30px 1fr;
+    gap: 30px;
+  }
+  #contact .box-contact .child .left .info .info-item:not(#contact .box-contact .child .left .info .info-item:last-child) {
+    margin-bottom: 30px;
+  }
+  #contact .box-contact .child .contact-form .contact-form-title {
+    text-align: center;
+  }
+}
+
+#topic-faqs, #topic-about_us {
+  padding: 100px 0;
+}
+#topic-faqs .box-topic, #topic-about_us .box-topic {
+  gap: 0;
+}
+#topic-faqs .box-topic .child, #topic-about_us .box-topic .child {
+  text-align: left !important;
+}
+#topic-faqs .box-topic .child .topic-img, #topic-about_us .box-topic .child .topic-img {
+  mix-blend-mode: multiply;
+}
+#topic-faqs .box-topic .child:last-child, #topic-about_us .box-topic .child:last-child {
+  padding-left: 24px;
+}
+#topic-faqs .box-topic .child .topic-group .topic-desc, #topic-about_us .box-topic .child .topic-group .topic-desc {
+  margin-bottom: 120px;
+}
+@media (max-width: 800.98px) {
+  #topic-faqs, #topic-about_us {
+    padding: 30px 0 60px;
+  }
+  #topic-faqs .box-topic, #topic-about_us .box-topic {
+    gap: 40px;
+  }
+  #topic-faqs .box-topic .child .topic-img, #topic-about_us .box-topic .child .topic-img {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+  }
+  #topic-faqs .box-topic .child .topic-group .topic-desc, #topic-about_us .box-topic .child .topic-group .topic-desc {
+    margin-bottom: 50px;
+  }
+}
+
+#faqs {
+  padding: 120px 0 160px;
+}
+#faqs .faqs-list .faqs-item {
+  border: 1px solid var(--c-gray-4);
+  border-radius: 12px;
+  padding: 2px 25px;
+}
+#faqs .faqs-list .faqs-item:not(#faqs .faqs-list .faqs-item:last-child) {
+  margin-bottom: 28px;
+}
+#faqs .faqs-list .faqs-item .faqs-item__title {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 40px;
+  align-items: center;
+  height: 62px;
+}
+#faqs .faqs-list .faqs-item .faqs-item__title .faqs-item__title-name {
+  font-size: 20px;
+  color: var(--c-main);
+  line-height: 35px;
+  margin-bottom: 0;
+}
+#faqs .faqs-list .faqs-item .faqs-item__content .card-body {
+  font-size: 20px;
+  color: var(--c-main);
+  line-height: 25px;
+  font-style: italic;
+  white-space: pre-line;
+}
+@media (max-width: 800.98px) {
+  #faqs {
+    padding: 70px 0 140px;
+  }
 }

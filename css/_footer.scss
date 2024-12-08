@@ -118,6 +118,12 @@
             width: 50%;
             line-height: 40px;
 
+            &:hover {
+              a {
+                color: var(--c-red);
+              }
+            }
+
             a {
               text-decoration: none;
               color: unset;

@@ -1,0 +1,86 @@
+#topic-faqs {
+  @extend #topic;
+
+  padding: 100px 0;
+
+  .box-topic {
+    gap: 0;
+    .child {
+      text-align: left !important;
+      .topic-img {
+        mix-blend-mode: multiply;
+      }
+      &:last-child {
+        padding-left: 24px;
+      }
+      .topic-group {
+        .topic-desc {
+          margin-bottom: 120px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 800.98px) {
+    padding: 30px 0 60px;
+    .box-topic {
+      gap: 40px;
+
+      .child {
+        .topic-img {
+          width: 50%;
+          margin: 0 auto;
+          display: block;
+        }
+        .topic-group {
+          .topic-desc {
+            margin-bottom: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#faqs {
+  padding: 120px 0 160px;
+  .faqs-list {
+    .faqs-item {
+      border: 1px solid var(--c-gray-4);
+      border-radius: 12px;
+      padding: 2px 25px;
+
+      &:not(&:last-child) {
+        margin-bottom: 28px;
+      }
+
+      .faqs-item__title {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        gap: 40px;
+        align-items: center;
+        height: 62px;
+        .faqs-item__title-img {}
+        .faqs-item__title-name {
+          font-size: 20px;
+          color: var(--c-main);
+          line-height: 35px;
+          margin-bottom: 0;
+        }
+      }
+      .faqs-item__content {
+        .card-body {
+          font-size: 20px;
+          color: var(--c-main);
+          line-height: 25px;
+          font-style: italic;
+          white-space: pre-line;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 800.98px) {
+    padding: 70px 0 140px;
+  }
+}

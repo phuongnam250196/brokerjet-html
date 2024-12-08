@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Commodities | Brokerjet</title>
+    <title>Commondities | Brokerjet</title>
     <link rel="stylesheet" href="./libs/bootstrap-5.0.2-dist/css/bootstrap.min.css" />
     <link href="./libs/aos/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./libs/owlcarousel/assets/owl.carousel.min.css" />
@@ -14,30 +14,44 @@
 </head>
 
 <body>
-    <div class="offcanvas offcanvas-start" id="menu-mobile">
-        <div class="offcanvas-header">
-            <button type="button" data-bs-dismiss="offcanvas">
-                <svg xmlns="http://www.w3.org/2000/svg" width="37" height="43" viewBox="0 0 37 43" fill="none">
-                    <path d="M1 11L36.5 32" stroke="white" />
-                    <path d="M36.7183 11.3781L0.781726 31.622" stroke="white" />
-                </svg>
-            </button>
-        </div>
-        <div class="offcanvas-body">
+    <div class="overlay" id="overlay">
+        <nav class="overlay-menu">
             <ul class="navbar-nav">
                 <li class="menu-item">
-                    <a class="nav-link" href="#">Springsについて</a>
+                    <a class="nav-link" href="javascript:void(0)">Home</a>
                 </li>
                 <li class="menu-item">
-                    <a class="nav-link" href="#">サービス内容</a>
+                    <a class="nav-link" href="javascript:void(0)">Market</a>
                 </li>
                 <li class="menu-item">
-                    <a class="nav-link" href="#">会社概要</a>
+                    <a class="nav-link" href="javascript:void(0)">Trading</a>
                 </li>
                 <li class="menu-item">
-                    <a class="nav-link" href="#">チーム</a>
+                    <a class="nav-link" href="javascript:void(0)">Education</a>
+                </li>
+                <li class="menu-item">
+                    <a class="nav-link" href="javascript:void(0)">About</a>
                 </li>
             </ul>
+            <div class="d-flex header-language">
+                <a href="#" class="active">EN</a> | <a href="#">VI</a>
+            </div>
+            <div class="d-flex header-login">
+                <a href="#" class="active">
+                    <img src="./imgs/icon-register.png" alt="" class="img-register"> Register
+                </a>
+                <a href="#">
+                    <img src="./imgs/icon-login.png" alt="" class="img-login"> Login
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <div id="toggle">
+        <div class="toggle-custom">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </div>
 
@@ -94,7 +108,7 @@
     </header>
 
     <!-- Topic -->
-    <section id="topic">
+    <section id="topic-commodities">
         <div class="container-c">
             <div class="box-topic">
                 <div class="child">
@@ -113,103 +127,82 @@
         </div>
     </section>
 
-    <!-- Commodities -->
+    <!-- commodities -->
     <section id="commodities">
         <div class="container-c">
-            <div class="commodities-head">
+            <div class="stocks-head">
                 <div class="child">
                     <div class="box-title">
                         <img src="./imgs/icon-2.png" alt="" class="box-title__icon">
-                        <h3 class="box-title__title">About <span>Stock Trading</span></h3>
-                        <p class="box-title__desc">The stock market is a global exchange for stocks and securities. Trading stocks allows you to capitalize on the share price movements of a company, whether they are rising or falling.
+                        <h3 class="box-title__title">About <span>Commodities Trading</span></h3>
+                        <p class="box-title__desc">Start trading the price movements of the world’s most popular commodities including oil and noble metals against major currencies.
 
-                            Trade stocks from large-cap companies in the global stock market with conditions designed to empower your strategy.</p>
+                            A key driver in world markets, commodities can be a highly volatile asset category and are used to diversify traders’ portfolios.
+                            
+                            Trade long or short on both rising and falling prices with ultra-low commissions and exceptional execution speeds.</p>
                     </div>
                 </div>
                 <div class="child">
-                    <div class="commodities-img">
-                        <img src="./imgs/img-25.png" alt="" class="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="commodities-stock">
-                <div class="commodities-stock__img">
-                    <img src="./imgs/img-16.png" alt="">
-                </div>
-                <div class="commodities-stock__content">
-                    <div class="child">
-                        <h4 class="child-title">Customisable trading alerts – don’t miss the price changes that matter</h4>
-                        <div class="child-desc">Don’t miss out on the perfect time to trade. Get the information you need, precisely when you need it most.
-                            
-                            Has your trade hit that crucial ‘sell’ price? Has your currency pair just hit the price you were waiting to buy at?
-                            
-                            Our in-app trading alerts deliver the news to you, even if you don’t have your trading app open:
-                            
-                            * Get alerts on the move through our mobile app push notifications
-                            * 7 different types of alert: don’t miss out on the data you care about
-                            * Buy or sell alerts to make sure you get in and out at the perfect time</div>
-                        <div class="child-img">
-                            <img src="./imgs/img-17.png" alt="">
-                        </div>
-                    </div>
-                    <div class="child">
-                        <h4 class="child-title">In-platform financial commentary</h4>
-                        <div class="child-desc">Central bank statements, earnings announcements, national budgets, new regulations… if it could potentially impact your trades, you’ll hear about it through the platform’s newsfeed.
-                            
-                            And you can tailor your feed so that you get only the analysis and news that you care about.
-                            
-                            No market noise. Just the data you need, when you need it.
-                            
-                            
-                            From day one, you’ll get their expert market commentary and insights delivered straight to your account, so you can use their years of market experience to help you become a more knowledgeable trader.</div>
-                        <div class="child-img">
-                            <img src="./imgs/img-18.png" alt="">
-                        </div>
+                    <div class="stocks-img">
+                        <img src="./imgs/img-11.png" alt="" class="">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- stock why -->
-    <div id="stock-why">
+    <!-- ways to -->
+    <div id="ways-to-commodities">
         <div class="container-c">
             <div class="stock-why-list">
                 <div class="child">
                     <div class="stock-why-img">
-                        <img src="./imgs/img-24.png" alt="" class="">
+                        <img src="./imgs/img-36.png" alt="" class="">
                     </div>
                 </div>
                 <div class="child">
                     <div class="box-title">
                         <img src="./imgs/icon-2.png" alt="" class="box-title__icon">
-                        <h3 class="box-title__title">Why Trade Stock CFDs</h3>
+                        <h4 class="box-title__subtitle">Commodities CFDs</h4>
+                        <p class="box-title__desc">You can trade on a range of commodity stocks like mines and linked to commodity markets such as GOLD with the same CFD account.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- commodities why -->
+    <div id="commodities-why">
+        <div class="container-c">
+            <div class="stock-why-list">
+                <div class="child">
+                    <div class="stock-why-img">
+                        <img src="./imgs/img-38.png" alt="" class="">
+                    </div>
+                </div>
+                <div class="child">
+                    <div class="box-title">
+                        <img src="./imgs/icon-2.png" alt="" class="box-title__icon">
+                        <h3 class="box-title__title">Why Trade Commodity CFDs</h3>
                         <h4 class="box-title__subtitle">with BrokerJet ?</h4>
                     </div>
                     <div class="list-custom">
                         <div class="item">
                             <img src="./imgs/icon-right.png" alt="" class="item-icon">
                             <div class="content">
-                                <p class="desc">Access a variety of stocks CFD online via our proprietary platform</p>
+                                <p class="desc">Access numerous CFDs on spot and futures Commodity markets with the same account</p>
                             </div>
                         </div>
                         <div class="item">
                             <img src="./imgs/icon-right.png" alt="" class="item-icon">
                             <div class="content">
-                                <p class="desc">Bullish or Bearish? Go Long and Short with leverage, depending on your outlook</p>
+                                <p class="desc">Spreads as low on Gold</p>
                             </div>
                         </div>
                         <div class="item">
                             <img src="./imgs/icon-right.png" alt="" class="item-icon">
                             <div class="content">
-                                <p class="desc">Tight spreads and competitive overnight swaps</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="./imgs/icon-right.png" alt="" class="item-icon">
-                            <div class="content">
-                                <p class="desc">Leverage up to 1:20</p>
+                                <p class="desc">Our CFDs on futures are continuous contracts that do not expire. We will automatically roll your positions</p>
                             </div>
                         </div>
                     </div>
@@ -217,6 +210,77 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Our most -->
+    <section id="our_most">
+        <div class="container-c">
+            <div class="our_most-title">
+                <h3 class="title">Our most traded Commodities pairs with the <span>lowest spreads</span></h3>
+            </div>
+
+            <div class="our_most-list">
+                <div class="our_most-item">
+                    <img src="./imgs/icon-6.png" alt="" class="our_most-item__icon">
+                    <div class="our_most-item__content">
+                        <h4 class="our_most-item__content-money">USD/JPY</h4>
+                        <p class="our_most-item__content-num">0.6</p>
+                    </div>
+                </div>
+                <div class="our_most-item">
+                    <img src="./imgs/icon-6.png" alt="" class="our_most-item__icon">
+                    <div class="our_most-item__content">
+                        <h4 class="our_most-item__content-money">USD/JPY</h4>
+                        <p class="our_most-item__content-num">0.6</p>
+                    </div>
+                </div>
+                <div class="our_most-item">
+                    <img src="./imgs/icon-6.png" alt="" class="our_most-item__icon">
+                    <div class="our_most-item__content">
+                        <h4 class="our_most-item__content-money">USD/JPY</h4>
+                        <p class="our_most-item__content-num">0.6</p>
+                    </div>
+                </div>
+                <div class="our_most-item">
+                    <img src="./imgs/icon-6.png" alt="" class="our_most-item__icon">
+                    <div class="our_most-item__content">
+                        <h4 class="our_most-item__content-money">USD/JPY</h4>
+                        <p class="our_most-item__content-num">0.6</p>
+                    </div>
+                </div>
+                <div class="our_most-item">
+                    <img src="./imgs/icon-6.png" alt="" class="our_most-item__icon">
+                    <div class="our_most-item__content">
+                        <h4 class="our_most-item__content-money">USD/JPY</h4>
+                        <p class="our_most-item__content-num">0.6</p>
+                    </div>
+                </div>
+                <div class="our_most-item">
+                    <img src="./imgs/icon-6.png" alt="" class="our_most-item__icon">
+                    <div class="our_most-item__content">
+                        <h4 class="our_most-item__content-money">USD/JPY</h4>
+                        <p class="our_most-item__content-num">0.6</p>
+                    </div>
+                </div>
+                <div class="our_most-item">
+                    <img src="./imgs/icon-6.png" alt="" class="our_most-item__icon">
+                    <div class="our_most-item__content">
+                        <h4 class="our_most-item__content-money">USD/JPY</h4>
+                        <p class="our_most-item__content-num">0.6</p>
+                    </div>
+                </div>
+                <div class="our_most-item">
+                    <img src="./imgs/icon-6.png" alt="" class="our_most-item__icon">
+                    <div class="our_most-item__content">
+                        <h4 class="our_most-item__content-money">USD/JPY</h4>
+                        <p class="our_most-item__content-num">0.6</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="base-btn">See More</a>
+        </div>
+    </section>
 
     <!-- Start Trading -->
     <section id="start_trading">
@@ -273,12 +337,19 @@
             <div class="box-footer__head">
                 <div class="child">
                     <div class="footer__head-title">
-                        <img src="./imgs/logo-footer.png" alt="" class="child-img">
+                        <a href="#"><img src="./imgs/logo-footer.png" alt="" class="child-img"></a>
                         <span>© 2023 Brokerjet. All Rights Reserved</span>
                     </div>
                 </div>
                 <div class="child">
-                    <span>Follow us</span>
+                    <div class="social">
+                        <h4 class="title">Follow us</h4>
+                        <div class="group-social">
+                            <a href="#"><img src="./imgs/icon-fb.png" alt=""></a>
+                            <a href="#"><img src="./imgs/icon-youtube.png" alt=""></a>
+                            <a href="#"><img src="./imgs/icon-twitter.png" alt=""></a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -294,22 +365,32 @@
                 <div class="child">
                     <div class="child-title"><img src="./imgs/icon-1.png" alt=""><span>Useful link</span></div>
                     <ul class="child-nav-footer">
-                        <li>About us</li>
-                        <li>Eduacation</li>
-                        <li>Trading Platforms</li>
-                        <li>Markets</li>
-                        <li>FAD</li>
-                        <li>Contact</li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Eduacation</a></li>
+                        <li><a href="#">Trading Platforms</a></li>
+                        <li><a href="#">Markets</a></li>
+                        <li><a href="#">FAD</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
-                    <img src="./imgs/img-7.png" alt="">
+                    <img src="./imgs/img-7.png" alt="" class="child-img">
                 </div>
             </div>
 
-            <p class="box-footer__foot">Broker Jet is a registered brand of Broker Jet Co. LTD., and is licensed by the Securities and Exchange Regulator of Cambodia (SERC) with authorization number 013. Trading Foreign Exchange (Forex) and Contracts for Differences (CFD’s) is highly speculative, carries a high level of risk and may not be suitable for all investors. You may sustain a loss of some or all of your invested capital, therefore, you should not speculate with capital that you cannot afford to lose. You should be aware of all the risks associated with trading on margin. This website is marketed and operated by Broker Jet Co. LTD. and is located at Amass Central Tower, Building 176, Street 63, Sangkat Boeung Keng Kang 1, Khan Boeung Keng Kang, Phnom Penh, Cambodia.
+            <p class="box-footer__foot">Broker Jet is a registered brand of Broker Jet Co. LTD., and is licensed by the
+                Securities and Exchange Regulator of Cambodia (SERC) with authorization number 013. Trading Foreign
+                Exchange (Forex) and Contracts for Differences (CFD’s) is highly speculative, carries a high level of
+                risk and may not be suitable for all investors. You may sustain a loss of some or all of your invested
+                capital, therefore, you should not speculate with capital that you cannot afford to lose. You should be
+                aware of all the risks associated with trading on margin. This website is marketed and operated by
+                Broker Jet Co. LTD. and is located at Amass Central Tower, Building 176, Street 63, Sangkat Boeung Keng
+                Kang 1, Khan Boeung Keng Kang, Phnom Penh, Cambodia.
 
-                Restricted Jurisdictions: We do not establish accounts to residents of certain jurisdictions including the USA, Japan, North Korea, Iran, the EU and the EEA. For further details please see Terms & Conditions.
-                
-                Disclaimer: All market expert analysis is intended for information use only and does not advocate trading in stocks, forex, or cryptocurrencies. All acts of trading are at your own risk.</p>
+                Restricted Jurisdictions: We do not establish accounts to residents of certain jurisdictions including
+                the USA, Japan, North Korea, Iran, the EU and the EEA. For further details please see Terms &
+                Conditions.
+
+                Disclaimer: All market expert analysis is intended for information use only and does not advocate
+                trading in stocks, forex, or cryptocurrencies. All acts of trading are at your own risk.</p>
         </div>
     </footer>
 

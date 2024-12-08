@@ -1,0 +1,172 @@
+#topic-about_us {
+  @extend #topic-faqs;
+
+  .box-topic {
+    .child {
+      .topic-img {
+        margin-left: -70px;
+      }
+    }
+  }
+}
+
+#about_us {
+  padding-top: 120px;
+  .about_us__head {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-end;
+    margin-bottom: 100px;
+
+    .child {
+      position: relative;
+      .box-title {
+        .box-title__title {
+          font-size: 40px;
+          color: var(--c-text);
+          font-weight: bold;
+
+          span {
+            color: var(--c-red);
+          }
+        }
+        .box-title__subtitle {
+          font-size: 20px;
+          font-weight: bold;
+          line-height: 30px;
+          color: var(--c-text);
+        }
+        .box-title__desc {
+          font-size: 20px;
+          line-height: 30px;
+        }
+      }
+      .child-img {
+        position: absolute;
+        left: 120px;
+        bottom: 0;
+      }
+    }
+  }
+
+  .our_mission {
+    margin-bottom: 115px;
+    .our_mission-img {
+      text-align: center;
+    }
+    .our_mission-content {
+      text-align: center;
+      .our_mission-content__title {
+        font-size: 34px;
+        color: var(--c-red);
+        font-weight: bold;
+        margin-bottom: 56px;
+      }
+      .our_mission-content__desc {
+        font-size: 20px;
+        white-space: pre-line;
+      }
+    }
+  }
+
+  .reasons_to {
+    .reasons_to-title {
+      text-align: center;
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 45px;
+      margin-bottom: 60px;
+      
+      span {
+        color: var(--c-red);
+        display: block;
+      }
+    }
+
+    .list-custom {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 70px 50px;
+      .item {
+        grid-template-columns: 93px 1fr;
+        gap: 25px;
+
+        .title {
+          line-height: 30px;
+          margin-bottom: 30px;
+        }
+
+        .content {
+          padding-top: 22px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1400.98px) {
+    .about_us__head {
+      .child {
+        .child-img {
+          left: 40px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 800.98px) {
+    padding-top: 60px;
+    .about_us__head {
+      grid-template-columns: 1fr;
+      margin-bottom: 60px;
+      gap: 40px;
+  
+      .child {
+        &:first-child {
+          order: 2;
+        }
+        .child-img {
+          position: unset;
+          text-align: center;
+          img {
+            width: 60%;
+          }
+        }
+      }
+    }
+  
+    .our_mission {
+      margin-bottom: 60px;
+      .our_mission-img {
+        img {
+          width: 70%;
+        }
+      }
+      .our_mission-content {
+        text-align: center;
+        .our_mission-content__title {
+          margin-bottom: 32px;
+        }
+      }
+    }
+  
+    .reasons_to {
+      .reasons_to-title {
+        margin-bottom: 40px;
+      }
+  
+      .list-custom {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        .item {
+  
+          .title {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
