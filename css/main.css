@@ -4582,6 +4582,28 @@ p {
 #simple_and_intuitive .simple .child .simple-content .simple-content__box .simple-content__box-list li::marker {
   color: var(--c-red);
 }
+#simple_and_intuitive .simple .child .simple-content .simple-content__box .simple-content__box-social {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  max-width: 350px;
+}
+#simple_and_intuitive .simple .child .simple-content .simple-content__box .simple-content__box-social .simple-content__box-social__child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+#simple_and_intuitive .simple .child .simple-content .simple-content__box .simple-content__box-social .simple-content__box-social__child .simple-content__box-social__child-img {
+  width: 24px;
+}
+#simple_and_intuitive .simple .child .simple-content .simple-content__box .simple-content__box-social .simple-content__box-social__child .simple-content__box-social__child-text {
+  font-size: 16px;
+  line-height: 1;
+}
 #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title {
   position: relative;
   text-align: center;

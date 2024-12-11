@@ -501,7 +501,28 @@
             }
           }
 
-          .simple-content__box-img {}
+          .simple-content__box-social {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            max-width: 350px;
+            .simple-content__box-social__child {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: center;
+              gap: 12px;
+              text-decoration: none;
+              color: inherit;
+              .simple-content__box-social__child-img {
+                width: 24px;
+              }
+              .simple-content__box-social__child-text {
+                font-size: 16px;
+                line-height: 1;
+              }
+            }
+          }
         }
       }
     }
