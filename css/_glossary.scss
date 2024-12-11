@@ -105,5 +105,20 @@
             }
         }
     }
+
+    @media (max-width: 1540.98px) {
+        .learn-list {
+            .item {
+                .item-content {
+                    .item-content__name {
+                        font-size: 16px;
+                    }
     
+                    .card-body {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
 }

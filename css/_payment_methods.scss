@@ -33,7 +33,8 @@
 
       .child {
         .topic-img {
-          width: 60%;
+          width: 100%;
+          padding-right: 0;
         }
         .topic-group {
           padding-left: 0;
@@ -68,6 +69,23 @@
           line-height: 35px;
         }
 
+      }
+    }
+  }
+
+  @media (max-width: 1540.98px) {
+    .box-payment_methods {
+      .child {
+        .payment_methods__content {
+          .payment_methods__content-title {
+            font-size: 16px;
+          }
+          .payment_methods__content-desc {
+            font-size: 16px;
+            line-height: 30px;
+          }
+  
+        }
       }
     }
   }

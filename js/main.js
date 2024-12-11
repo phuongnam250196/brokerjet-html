@@ -3,19 +3,33 @@ $(document).ready(function () {
     $(this).toggleClass("open");
     $("#overlay").toggleClass("open");
     $("#header-fix").toggleClass("open");
-  });
-  $("#overlay li a").on("click", function () {
-    $("#overlay").toggleClass("open");
-    // $('#header-fix').toggleClass('open');
-  });
 
+    if ($("#overlay li").hasClass("open")) {
+      $("#overlay li").removeClass("open");
+    }
+  });
+  $("#overlay li a").on("click", function (e) {
+    const overlayItems = $("#overlay li");
+    const parentItem = $(this).parent();
+    const overlay = $("#overlay");
 
+    if (e.target.href.includes("javascript:void")) {
+      if (!parentItem.hasClass("open")) {
+        overlayItems.removeClass("open");
+      }
+      parentItem.toggleClass("open");
+      return;
+    }
+
+    overlayItems.removeClass("open");
+    overlay.toggleClass("open");
+  });
   $(".owl-banner").owlCarousel({
     loop: true,
     center: true,
-    margin: 400,
+    margin: 20,
     nav: false,
-    dots: false,
+    dots: true,
     // autoWidth:true,
     // autoplay: true,
     // autoplayTimeout: 3000,

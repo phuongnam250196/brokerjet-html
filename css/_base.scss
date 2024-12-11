@@ -36,17 +36,31 @@ p {
 }
 
 @font-face {
-    font-family: 'UTMHelveBold';
-    src: url('../fonts/00117-UTM-HelveBold.ttf') format('ttf');
+    font-family: 'UTM Helve';
+    src: url('../fonts/UTM Helve.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UTM Helve';
+    src: url('../fonts/UTM Helve_Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'UTM Helve';
+    src: url('../fonts/UTM HelveBold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'UTMHelve';
-    src: url('../fonts/00115-UTM-Helve.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'UTM Helve';
+    src: url('../fonts/UTM HelveBold_Italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
@@ -61,7 +75,7 @@ body {
     font-size: 16px;
     color: var(--c-text);
     background-color: var(--c-white);
-    font-family: "UTMHelve", sans-serif;
+    font-family: 'UTM Helve', sans-serif;
 }
 
 .wrapper {
@@ -138,6 +152,13 @@ p {
         white-space: pre-line;
     }
 
+    @media (max-width: 1540.98px) {
+        .box-title__desc {
+            font-size: 16px;
+            line-height: 30px;
+        }
+    }
+
     @media (max-width: 800.98px) {
         text-align: center;
     }
@@ -154,10 +175,6 @@ p {
             margin-bottom: 26px;
         }
 
-        .item-icon {
-
-        }
-
         .content {
             .title {
                 font-size: 20px;
@@ -168,6 +185,21 @@ p {
             .desc {
                 font-size: 20px;
                 line-height: 30px;
+            }
+        }
+    }
+
+    @media (max-width: 1540.98px) {
+        .item {
+            .content {
+                .title {
+                    font-size: 16px;
+                    line-height: 28px;
+                }
+                .desc {
+                    font-size: 16px;
+                    line-height: 26px;
+                }
             }
         }
     }
@@ -182,4 +214,8 @@ p {
     font-size: 20px;
     color: var(--c-white);
     text-decoration: none;
+
+    @media (max-width: 1540.98px) {
+        font-size: 16px;
+    }
 }

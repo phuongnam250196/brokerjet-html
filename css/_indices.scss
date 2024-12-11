@@ -47,12 +47,13 @@
   }
 
   @media (max-width: 800.98px) {
+    padding-top: 20px;
     .box-topic {
       gap: 40px;
 
       .child {
         .topic-img {
-          width: 60%;
+          width: 100%;
           text-align: center;
         }
 

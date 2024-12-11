@@ -1188,16 +1188,28 @@ p {
 }
 
 @font-face {
-  font-family: "UTMHelveBold";
-  src: url("../fonts/00117-UTM-HelveBold.ttf") format("ttf");
+  font-family: "UTM Helve";
+  src: url("../fonts/UTM Helve.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "UTM Helve";
+  src: url("../fonts/UTM Helve_Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "UTM Helve";
+  src: url("../fonts/UTM HelveBold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: "UTMHelve";
-  src: url("../fonts/00115-UTM-Helve.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
+  font-family: "UTM Helve";
+  src: url("../fonts/UTM HelveBold_Italic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
 }
 body {
   margin: 0;
@@ -1209,7 +1221,7 @@ body {
   font-size: 16px;
   color: var(--c-text);
   background-color: var(--c-white);
-  font-family: "UTMHelve", sans-serif;
+  font-family: "UTM Helve", sans-serif;
 }
 
 .wrapper {
@@ -1282,6 +1294,12 @@ p {
   line-height: 35px;
   white-space: pre-line;
 }
+@media (max-width: 1540.98px) {
+  .box-title .box-title__desc {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
 @media (max-width: 800.98px) {
   .box-title {
     text-align: center;
@@ -1307,6 +1325,16 @@ p {
   font-size: 20px;
   line-height: 30px;
 }
+@media (max-width: 1540.98px) {
+  .list-custom .item .content .title {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .list-custom .item .content .desc {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
 
 .base-btn {
   display: flex;
@@ -1319,6 +1347,11 @@ p {
   font-size: 20px;
   color: var(--c-white);
   text-decoration: none;
+}
+@media (max-width: 1540.98px) {
+  .base-btn {
+    font-size: 16px;
+  }
 }
 
 .toggle-custom {
@@ -1415,13 +1448,76 @@ p {
 #header .navbar .collapse {
   flex-wrap: wrap;
 }
+#header .navbar .collapse .navbar-nav .nav-item {
+  position: relative;
+}
 #header .navbar .collapse .navbar-nav .nav-item:hover .nav-link {
   color: var(--c-red);
 }
-#header .navbar .collapse .navbar-nav .nav-item .nav-link {
+#header .navbar .collapse .navbar-nav .nav-item:hover > .sub-menu {
+  display: block;
+}
+#header .navbar .collapse .navbar-nav .nav-item > .nav-link {
   font-size: 16px;
   color: var(--c-main);
   padding: 0 40px;
+  height: 60px;
+  line-height: 60px;
+}
+#header .navbar .collapse .navbar-nav .nav-item > .sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  width: 500px;
+  height: 276px;
+  border-radius: 30px;
+  padding: 12px 10px;
+  display: none;
+}
+#header .navbar .collapse .navbar-nav .nav-item > .sub-menu .sub-menu__bg {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./../imgs/bg-submenu.png) no-repeat;
+  background-size: cover;
+  z-index: -1;
+  border-radius: 20px;
+}
+#header .navbar .collapse .navbar-nav .nav-item > .sub-menu .sub-menu__list {
+  background-color: var(--c-white);
+  border-radius: 20px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 16px;
+  padding: 60px 40px;
+  height: 100%;
+  align-items: center;
+}
+#header .navbar .collapse .navbar-nav .nav-item > .sub-menu .sub-menu__list li:hover a {
+  color: var(--c-red);
+}
+#header .navbar .collapse .navbar-nav .nav-item > .sub-menu .sub-menu__list li:hover a img {
+  filter: brightness(0) saturate(100%) invert(16%) sepia(78%) saturate(5523%) hue-rotate(351deg) brightness(92%) contrast(93%);
+}
+#header .navbar .collapse .navbar-nav .nav-item > .sub-menu .sub-menu__list li a {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 16px;
+  color: var(--c-main);
+  text-decoration: none;
+  color: inherit;
+  align-items: center;
+}
+#header .navbar .collapse .navbar-nav .nav-item > .sub-menu .sub-menu__list li a img {
+  width: 100%;
+}
+#header .navbar .collapse .navbar-nav .nav-item > .sub-menu .sub-menu__list li a span {
+  font-size: 16px;
 }
 #header .navbar .collapse .header-search form {
   position: relative;
@@ -1476,6 +1572,25 @@ p {
   }
   #header .navbar .collapse .navbar-nav .nav-item .nav-link {
     padding: 0 30px;
+  }
+  #header .navbar .collapse .navbar-nav .nav-item > .sub-menu {
+    width: 400px;
+    height: 186px;
+    border-radius: 20px;
+    padding: 9px 8px;
+    display: none;
+  }
+  #header .navbar .collapse .navbar-nav .nav-item > .sub-menu .sub-menu__list {
+    border-radius: 16px;
+    gap: 40px 16px;
+    padding: 40px 30px;
+  }
+  #header .navbar .collapse .navbar-nav .nav-item > .sub-menu .sub-menu__list li a {
+    grid-template-columns: 20px 1fr;
+    gap: 12px;
+  }
+  #header .navbar .collapse .navbar-nav .nav-item > .sub-menu .sub-menu__list li a span {
+    font-size: 14px;
   }
   #header .navbar .collapse .header-language a {
     text-decoration: none;
@@ -1573,20 +1688,33 @@ p {
   flex-direction: column;
   text-decoration: none;
 }
-.overlay nav .navbar-nav > .menu-item > .sub-menu {
-  padding: 0 0 25px;
+.overlay nav .navbar-nav > .menu-item.open > .sub-menu__list {
+  display: block;
+  background-color: #f0f0f0;
+  transition: all 1s ease-in-out;
+}
+.overlay nav .navbar-nav > .menu-item > .sub-menu__list {
   list-style: none;
-}
-.overlay nav .navbar-nav > .menu-item > .sub-menu .menu-item:not(.overlay nav .navbar-nav > .menu-item > .sub-menu .menu-item:last-child) {
-  margin-bottom: 20px;
-}
-.overlay nav .navbar-nav > .menu-item > .sub-menu .menu-item > a {
+  display: none;
   padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
+}
+.overlay nav .navbar-nav > .menu-item > .sub-menu__list li {
+  text-align: center;
+}
+.overlay nav .navbar-nav > .menu-item > .sub-menu__list li:not(.overlay nav .navbar-nav > .menu-item > .sub-menu__list li:last-child) {
+  border-bottom: 1px solid var(--c-gray);
+}
+.overlay nav .navbar-nav > .menu-item > .sub-menu__list li a {
+  grid-template-columns: 20px 1fr;
+  gap: 12px;
   text-decoration: none;
+  text-align: center;
+  color: inherit;
+  padding: 12px;
+  display: block;
+}
+.overlay nav .navbar-nav > .menu-item > .sub-menu__list li a span {
+  font-size: 16px;
 }
 .overlay nav .header-language {
   justify-content: center;
@@ -1774,6 +1902,16 @@ p {
     width: calc(100% - 700px);
     padding-right: 0;
   }
+  #footer .box-footer .box-footer__body .child .child-address li {
+    font-size: 16px;
+  }
+  #footer .box-footer .box-footer__body .child .child-title span {
+    font-size: 16px;
+  }
+  #footer .box-footer .box-footer__body .child .child-nav-footer li {
+    font-size: 16px;
+    line-height: 30px;
+  }
 }
 @media (max-width: 1100.98px) {
   #footer {
@@ -1817,6 +1955,19 @@ p {
     margin-bottom: 16px;
   }
 }
+@media (max-width: 440.98px) {
+  #footer {
+    padding: 90px 20px 40px;
+  }
+  #footer .footer-img {
+    top: -30px;
+  }
+  #footer .box-footer .box-footer__head {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+}
 
 #topic, #topic-faqs, #topic-about_us, #topic-contact, #topic-payment_methods, #topic-trading_platforms, #topic-commodities, #topic-indices, #topic-forex, #topic-stock, #topic-glossary, #topic-learn {
   padding: 60px 0;
@@ -1838,7 +1989,6 @@ p {
 #topic .box-topic .child .topic-group .topic-title, #topic-faqs .box-topic .child .topic-group .topic-title, #topic-about_us .box-topic .child .topic-group .topic-title, #topic-contact .box-topic .child .topic-group .topic-title, #topic-payment_methods .box-topic .child .topic-group .topic-title, #topic-trading_platforms .box-topic .child .topic-group .topic-title, #topic-commodities .box-topic .child .topic-group .topic-title, #topic-indices .box-topic .child .topic-group .topic-title, #topic-forex .box-topic .child .topic-group .topic-title, #topic-stock .box-topic .child .topic-group .topic-title, #topic-glossary .box-topic .child .topic-group .topic-title, #topic-learn .box-topic .child .topic-group .topic-title {
   color: var(--c-red);
   font-size: 50px;
-  font-family: "UTMHelveBold", sans-serif;
   font-weight: bold;
   margin-bottom: 30px;
 }
@@ -1859,13 +2009,27 @@ p {
   color: var(--c-white);
   text-decoration: none;
 }
+@media (max-width: 1540.98px) {
+  #topic .box-topic .child .topic-group .topic-title, #topic-faqs .box-topic .child .topic-group .topic-title, #topic-about_us .box-topic .child .topic-group .topic-title, #topic-contact .box-topic .child .topic-group .topic-title, #topic-payment_methods .box-topic .child .topic-group .topic-title, #topic-trading_platforms .box-topic .child .topic-group .topic-title, #topic-commodities .box-topic .child .topic-group .topic-title, #topic-indices .box-topic .child .topic-group .topic-title, #topic-forex .box-topic .child .topic-group .topic-title, #topic-stock .box-topic .child .topic-group .topic-title, #topic-glossary .box-topic .child .topic-group .topic-title, #topic-learn .box-topic .child .topic-group .topic-title {
+    font-size: 40px;
+  }
+  #topic .box-topic .child .topic-group .topic-desc, #topic-faqs .box-topic .child .topic-group .topic-desc, #topic-about_us .box-topic .child .topic-group .topic-desc, #topic-contact .box-topic .child .topic-group .topic-desc, #topic-payment_methods .box-topic .child .topic-group .topic-desc, #topic-trading_platforms .box-topic .child .topic-group .topic-desc, #topic-commodities .box-topic .child .topic-group .topic-desc, #topic-indices .box-topic .child .topic-group .topic-desc, #topic-forex .box-topic .child .topic-group .topic-desc, #topic-stock .box-topic .child .topic-group .topic-desc, #topic-glossary .box-topic .child .topic-group .topic-desc, #topic-learn .box-topic .child .topic-group .topic-desc {
+    font-size: 20px;
+  }
+  #topic .box-topic .child .topic-group .topic-btn, #topic-faqs .box-topic .child .topic-group .topic-btn, #topic-about_us .box-topic .child .topic-group .topic-btn, #topic-contact .box-topic .child .topic-group .topic-btn, #topic-payment_methods .box-topic .child .topic-group .topic-btn, #topic-trading_platforms .box-topic .child .topic-group .topic-btn, #topic-commodities .box-topic .child .topic-group .topic-btn, #topic-indices .box-topic .child .topic-group .topic-btn, #topic-forex .box-topic .child .topic-group .topic-btn, #topic-stock .box-topic .child .topic-group .topic-btn, #topic-glossary .box-topic .child .topic-group .topic-btn, #topic-learn .box-topic .child .topic-group .topic-btn {
+    font-size: 16px;
+  }
+}
 @media (max-width: 800.98px) {
+  #topic, #topic-faqs, #topic-about_us, #topic-contact, #topic-payment_methods, #topic-trading_platforms, #topic-commodities, #topic-indices, #topic-forex, #topic-stock, #topic-glossary, #topic-learn {
+    padding: 40px 0;
+  }
   #topic .box-topic, #topic-faqs .box-topic, #topic-about_us .box-topic, #topic-contact .box-topic, #topic-payment_methods .box-topic, #topic-trading_platforms .box-topic, #topic-commodities .box-topic, #topic-indices .box-topic, #topic-forex .box-topic, #topic-stock .box-topic, #topic-glossary .box-topic, #topic-learn .box-topic {
     grid-template-columns: 1fr;
     gap: 32px;
   }
   #topic .box-topic .child .topic-img, #topic-faqs .box-topic .child .topic-img, #topic-about_us .box-topic .child .topic-img, #topic-contact .box-topic .child .topic-img, #topic-payment_methods .box-topic .child .topic-img, #topic-trading_platforms .box-topic .child .topic-img, #topic-commodities .box-topic .child .topic-img, #topic-indices .box-topic .child .topic-img, #topic-forex .box-topic .child .topic-img, #topic-stock .box-topic .child .topic-img, #topic-glossary .box-topic .child .topic-img, #topic-learn .box-topic .child .topic-img {
-    width: 60%;
+    width: 80%;
   }
   #topic .box-topic .child .topic-group .topic-title, #topic-faqs .box-topic .child .topic-group .topic-title, #topic-about_us .box-topic .child .topic-group .topic-title, #topic-contact .box-topic .child .topic-group .topic-title, #topic-payment_methods .box-topic .child .topic-group .topic-title, #topic-trading_platforms .box-topic .child .topic-group .topic-title, #topic-commodities .box-topic .child .topic-group .topic-title, #topic-indices .box-topic .child .topic-group .topic-title, #topic-forex .box-topic .child .topic-group .topic-title, #topic-stock .box-topic .child .topic-group .topic-title, #topic-glossary .box-topic .child .topic-group .topic-title, #topic-learn .box-topic .child .topic-group .topic-title {
     font-size: 32px;
@@ -1911,6 +2075,14 @@ p {
   color: var(--c-text);
   font-size: 18px;
 }
+@media (max-width: 1540.98px) {
+  #news-list .box-list .item .item-title {
+    font-size: 16px;
+  }
+  #news-list .box-list .item .item-desc {
+    font-size: 16px;
+  }
+}
 @media (max-width: 1000.98px) {
   #news-list .box-list {
     grid-template-columns: repeat(2, 1fr);
@@ -1923,46 +2095,46 @@ p {
   }
 }
 
-#news-guide {
+#news-guide, #pricing {
   margin: 140px 0;
 }
-#news-guide .news-guide-box {
+#news-guide .news-guide-box, #pricing .news-guide-box {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: flex-start;
   gap: 50px;
 }
-#news-guide .news-guide-box .child {
+#news-guide .news-guide-box .child, #pricing .news-guide-box .child {
   border-radius: 20px;
   filter: drop-shadow(0px 12px 25.5px rgba(58, 58, 58, 0.15));
   background-color: #ffffff;
   position: relative;
   height: 100%;
 }
-#news-guide .news-guide-box .child .list {
+#news-guide .news-guide-box .child .list, #pricing .news-guide-box .child .list {
   padding: 25px;
 }
-#news-guide .news-guide-box .child .list .item {
+#news-guide .news-guide-box .child .list .item, #pricing .news-guide-box .child .list .item {
   display: grid;
   grid-template-columns: 125px 1fr;
   gap: 30px;
 }
-#news-guide .news-guide-box .child .list .item:not(#news-guide .news-guide-box .child .list .item:last-child) {
+#news-guide .news-guide-box .child .list .item:not(#news-guide .news-guide-box .child .list .item:last-child):not(#pricing .news-guide-box .child .list .item:last-child), #pricing .news-guide-box .child .list .item:not(#news-guide .news-guide-box .child .list .item:last-child):not(#pricing .news-guide-box .child .list .item:last-child) {
   margin-bottom: 20px;
 }
-#news-guide .news-guide-box .child .list .item .item-content .title {
+#news-guide .news-guide-box .child .list .item .item-content .title, #pricing .news-guide-box .child .list .item .item-content .title {
   font-size: 16px;
   font-weight: bold;
 }
-#news-guide .news-guide-box .child .list .item .item-content .title a {
+#news-guide .news-guide-box .child .list .item .item-content .title a, #pricing .news-guide-box .child .list .item .item-content .title a {
   color: inherit;
   text-decoration: none;
 }
-#news-guide .news-guide-box .child .list .item .item-content .time {
+#news-guide .news-guide-box .child .list .item .item-content .time, #pricing .news-guide-box .child .list .item .item-content .time {
   font-size: 16px;
   font-style: italic;
 }
-#news-guide .news-guide-box .child .view-more {
+#news-guide .news-guide-box .child .view-more, #pricing .news-guide-box .child .view-more {
   font-size: 14px;
   color: var(--c-red);
   position: absolute;
@@ -1971,26 +2143,26 @@ p {
   width: 100%;
   text-decoration: none;
 }
-#news-guide .news-guide-box .child .news-guide__note {
+#news-guide .news-guide-box .child .news-guide__note, #pricing .news-guide-box .child .news-guide__note {
   position: absolute;
   bottom: -40px;
   text-align: center;
   width: 100%;
   font-size: 14px;
 }
-#news-guide .news-guide-box .child .news-guide__img {
+#news-guide .news-guide-box .child .news-guide__img, #pricing .news-guide-box .child .news-guide__img {
   width: 100%;
 }
 @media (max-width: 1000.98px) {
-  #news-guide .news-guide-box {
+  #news-guide .news-guide-box, #pricing .news-guide-box {
     gap: 32px;
   }
 }
 @media (max-width: 800.98px) {
-  #news-guide {
+  #news-guide, #pricing {
     margin: 60px 0;
   }
-  #news-guide .news-guide-box {
+  #news-guide .news-guide-box, #pricing .news-guide-box {
     grid-template-columns: 1fr;
     gap: 70px;
   }
@@ -2087,6 +2259,11 @@ p {
     display: none;
   }
 }
+@media (max-width: 440.98px) {
+  #start_trading .start_trading-step .child .child-round .child-img {
+    width: 100%;
+  }
+}
 
 #news-detail {
   padding-top: 80px;
@@ -2128,6 +2305,20 @@ p {
 #news-detail .news-detail__2 .img {
   border-radius: 12px;
   height: 320px;
+}
+@media (max-width: 1540.98px) {
+  #news-detail .news-detail__1 .content .title {
+    font-size: 24px;
+  }
+  #news-detail .news-detail__1 .content .desc {
+    font-size: 16px;
+  }
+  #news-detail .news-detail__2 .content {
+    padding-left: 100px;
+  }
+  #news-detail .news-detail__2 .content .desc {
+    font-size: 16px;
+  }
 }
 @media (max-width: 1000.98px) {
   #news-detail .news-detail__2 .content {
@@ -2227,6 +2418,14 @@ p {
 }
 #learn-list .learn-list .item .item-content .item-content__name a:hover, #glossary-list .learn-list .item .item-content .item-content__name a:hover {
   color: var(--c-red);
+}
+@media (max-width: 1540.98px) {
+  #learn-list .learn-desc, #glossary-list .learn-desc {
+    font-size: 16px;
+  }
+  #learn-list .learn-list .item .item-content .item-content__name, #glossary-list .learn-list .item .item-content .item-content__name {
+    font-size: 16px;
+  }
 }
 @media (max-width: 1200.98px) {
   #learn-list, #glossary-list {
@@ -2356,6 +2555,14 @@ p {
   padding: 70px 0 0;
   max-width: 660px;
 }
+@media (max-width: 1540.98px) {
+  #glossary-list .learn-list .item .item-content .item-content__name {
+    font-size: 16px;
+  }
+  #glossary-list .learn-list .item .item-content .card-body {
+    font-size: 16px;
+  }
+}
 
 #topic-stock .box-topic {
   gap: 0;
@@ -2372,7 +2579,7 @@ p {
     gap: 40px;
   }
   #topic-stock .box-topic .child .topic-img {
-    width: 80%;
+    width: 100%;
     text-align: center;
   }
   #topic-stock .box-topic .child:last-child {
@@ -2454,6 +2661,26 @@ p {
 #stocks .stocks-stock .stocks-stock__content .child .child-img, #commodities .stocks-stock .stocks-stock__content .child .child-img, #indices .stocks-stock .stocks-stock__content .child .child-img, #forex .stocks-stock .stocks-stock__content .child .child-img {
   margin-top: auto;
   text-align: center;
+}
+@media (max-width: 1540.98px) {
+  #stocks .stocks-head .child .box-title .box-title__title, #commodities .stocks-head .child .box-title .box-title__title, #indices .stocks-head .child .box-title .box-title__title, #forex .stocks-head .child .box-title .box-title__title {
+    font-size: 40px;
+  }
+  #stocks .stocks-head .child .box-title .box-title__desc, #commodities .stocks-head .child .box-title .box-title__desc, #indices .stocks-head .child .box-title .box-title__desc, #forex .stocks-head .child .box-title .box-title__desc {
+    line-height: 26px;
+    font-size: 16px;
+  }
+  #stocks .stocks-stock .stocks-stock__img img, #commodities .stocks-stock .stocks-stock__img img, #indices .stocks-stock .stocks-stock__img img, #forex .stocks-stock .stocks-stock__img img {
+    width: 80%;
+  }
+  #stocks .stocks-stock .stocks-stock__content .child .child-title, #commodities .stocks-stock .stocks-stock__content .child .child-title, #indices .stocks-stock .stocks-stock__content .child .child-title, #forex .stocks-stock .stocks-stock__content .child .child-title {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  #stocks .stocks-stock .stocks-stock__content .child .child-desc, #commodities .stocks-stock .stocks-stock__content .child .child-desc, #indices .stocks-stock .stocks-stock__content .child .child-desc, #forex .stocks-stock .stocks-stock__content .child .child-desc {
+    font-size: 16px;
+    line-height: 26px;
+  }
 }
 @media (max-width: 1450.98px) {
   #stocks .stocks-head .child .stocks-img img, #commodities .stocks-head .child .stocks-img img, #indices .stocks-head .child .stocks-img img, #forex .stocks-head .child .stocks-img img {
@@ -2556,6 +2783,23 @@ p {
   font-size: 20px;
   line-height: 30px;
 }
+@media (max-width: 1540.98px) {
+  #stock-why .stock-why-list .child .box-title .box-title__title, #commodities-why .stock-why-list .child .box-title .box-title__title, #ways-to .stock-why-list .child .box-title .box-title__title, #ways-to-commodities .stock-why-list .child .box-title .box-title__title, #forex-why .stock-why-list .child .box-title .box-title__title {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+  #stock-why .stock-why-list .child .box-title .box-title__subtitle, #commodities-why .stock-why-list .child .box-title .box-title__subtitle, #ways-to .stock-why-list .child .box-title .box-title__subtitle, #ways-to-commodities .stock-why-list .child .box-title .box-title__subtitle, #forex-why .stock-why-list .child .box-title .box-title__subtitle {
+    font-size: 36px;
+  }
+  #stock-why .stock-why-list .child .list .item .title, #commodities-why .stock-why-list .child .list .item .title, #ways-to .stock-why-list .child .list .item .title, #ways-to-commodities .stock-why-list .child .list .item .title, #forex-why .stock-why-list .child .list .item .title {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  #stock-why .stock-why-list .child .list .item .desc, #commodities-why .stock-why-list .child .list .item .desc, #ways-to .stock-why-list .child .list .item .desc, #ways-to-commodities .stock-why-list .child .list .item .desc, #forex-why .stock-why-list .child .list .item .desc {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
 @media (max-width: 1000.98px) {
   #stock-why, #commodities-why, #ways-to, #ways-to-commodities, #forex-why {
     margin-bottom: 80px;
@@ -2655,6 +2899,15 @@ p {
     margin-bottom: 60px;
   }
 }
+@media (max-width: 440.98px) {
+  #our_most .our_most-title .title {
+    font-size: 30px;
+  }
+  #our_most .our_most-list {
+    grid-template-columns: 1fr;
+    margin-bottom: 40px;
+  }
+}
 
 #topic-forex .box-topic {
   gap: 0;
@@ -2688,7 +2941,7 @@ p {
     gap: 40px;
   }
   #topic-forex .box-topic .child .topic-img {
-    width: 60%;
+    width: 100%;
     text-align: center;
   }
   #topic-forex .box-topic .child:last-child {
@@ -2876,11 +3129,14 @@ p {
   }
 }
 @media (max-width: 800.98px) {
+  #topic-indices {
+    padding-top: 20px;
+  }
   #topic-indices .box-topic {
     gap: 40px;
   }
   #topic-indices .box-topic .child .topic-img {
-    width: 60%;
+    width: 100%;
     text-align: center;
   }
   #topic-indices .box-topic .child:last-child {
@@ -3058,7 +3314,7 @@ p {
     gap: 40px;
   }
   #topic-commodities .box-topic .child .topic-img {
-    width: 60%;
+    width: 100%;
     text-align: center;
   }
   #topic-commodities .box-topic .child:last-child {
@@ -3192,233 +3448,282 @@ p {
   }
 }
 
-#trading-platforms {
+#trading-platforms, #simple_and_intuitive {
   padding-top: 100px;
 }
-#trading-platforms .trading-platforms__head {
+#trading-platforms .trading-platforms__head, #simple_and_intuitive .trading-platforms__head {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 132px;
 }
-#trading-platforms .trading-platforms__head .child:first-child {
+#trading-platforms .trading-platforms__head .child:first-child, #simple_and_intuitive .trading-platforms__head .child:first-child {
   width: calc(100% + 20px);
 }
-#trading-platforms .trading-platforms__head .child .child-img {
+#trading-platforms .trading-platforms__head .child .child-img, #simple_and_intuitive .trading-platforms__head .child .child-img {
   position: relative;
   height: 100%;
   width: 100%;
 }
-#trading-platforms .trading-platforms__head .child .child-img img {
+#trading-platforms .trading-platforms__head .child .child-img img, #simple_and_intuitive .trading-platforms__head .child .child-img img {
   position: absolute;
   left: 40px;
   bottom: 0;
 }
-#trading-platforms .trading-platforms__head .child .box-title {
+#trading-platforms .trading-platforms__head .child .box-title, #simple_and_intuitive .trading-platforms__head .child .box-title {
   margin-bottom: 54px;
 }
-#trading-platforms .trading-platforms__head .child .box-title .box-title__title {
+#trading-platforms .trading-platforms__head .child .box-title .box-title__title, #simple_and_intuitive .trading-platforms__head .child .box-title .box-title__title {
   font-size: 40px;
   margin-bottom: 0;
   line-height: 1;
 }
-#trading-platforms .trading-platforms__head .child .box-title .box-title__subtitle {
+#trading-platforms .trading-platforms__head .child .box-title .box-title__subtitle, #simple_and_intuitive .trading-platforms__head .child .box-title .box-title__subtitle {
   font-size: 40px;
   line-height: 45px;
   margin-bottom: 100px;
 }
-#trading-platforms .trading-platforms__head .child .box-title .box-title__desc {
+#trading-platforms .trading-platforms__head .child .box-title .box-title__desc, #simple_and_intuitive .trading-platforms__head .child .box-title .box-title__desc {
   font-size: 20px;
   line-height: 35px;
   white-space: pre-line;
 }
-#trading-platforms .trading-platforms__why {
+#trading-platforms .trading-platforms__why, #simple_and_intuitive .trading-platforms__why {
   margin-bottom: 140px;
 }
-#trading-platforms .trading-platforms__why .trading-platforms__why-img {
+#trading-platforms .trading-platforms__why .trading-platforms__why-img, #simple_and_intuitive .trading-platforms__why .trading-platforms__why-img {
   text-align: center;
   margin-bottom: 80px;
 }
-#trading-platforms .trading-platforms__why .trading-platforms__why-content {
+#trading-platforms .trading-platforms__why .trading-platforms__why-content, #simple_and_intuitive .trading-platforms__why .trading-platforms__why-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: flex-start;
   gap: 70px;
 }
-#trading-platforms .trading-platforms__why .trading-platforms__why-content .child .box-title {
+#trading-platforms .trading-platforms__why .trading-platforms__why-content .child .box-title, #simple_and_intuitive .trading-platforms__why .trading-platforms__why-content .child .box-title {
   margin-bottom: 70px;
 }
-#trading-platforms .trading-platforms__why .trading-platforms__why-content .child:last-child .box-title {
+#trading-platforms .trading-platforms__why .trading-platforms__why-content .child:last-child .box-title, #simple_and_intuitive .trading-platforms__why .trading-platforms__why-content .child:last-child .box-title {
   margin-bottom: 105px;
 }
-#trading-platforms .trading-platforms__benefit {
+#trading-platforms .trading-platforms__benefit, #simple_and_intuitive .trading-platforms__benefit {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-bottom: 180px;
 }
-#trading-platforms .trading-platforms__benefit .child .benefit-img {
+#trading-platforms .trading-platforms__benefit .child .benefit-img, #simple_and_intuitive .trading-platforms__benefit .child .benefit-img {
   width: 100%;
   height: 100%;
   position: relative;
 }
-#trading-platforms .trading-platforms__benefit .child .benefit-img img {
+#trading-platforms .trading-platforms__benefit .child .benefit-img img, #simple_and_intuitive .trading-platforms__benefit .child .benefit-img img {
   position: absolute;
   right: 90px;
   top: 50%;
   transform: translateY(-50%);
 }
-#trading-platforms .trading-platforms__benefit .child .box-title .box-title__title {
+#trading-platforms .trading-platforms__benefit .child .box-title .box-title__title, #simple_and_intuitive .trading-platforms__benefit .child .box-title .box-title__title {
   font-size: 40px;
   line-height: 1;
   margin-bottom: 0;
 }
-#trading-platforms .trading-platforms__benefit .child .box-title .box-title__subtitle {
+#trading-platforms .trading-platforms__benefit .child .box-title .box-title__subtitle, #simple_and_intuitive .trading-platforms__benefit .child .box-title .box-title__subtitle {
   font-size: 40px;
   margin-bottom: 50px;
 }
-#trading-platforms .trading-platforms__benefit .child .list .item:not(#trading-platforms .trading-platforms__benefit .child .list .item:last-child) {
+#trading-platforms .trading-platforms__benefit .child .list .item:not(#trading-platforms .trading-platforms__benefit .child .list .item:last-child):not(#simple_and_intuitive .trading-platforms__benefit .child .list .item:last-child), #simple_and_intuitive .trading-platforms__benefit .child .list .item:not(#trading-platforms .trading-platforms__benefit .child .list .item:last-child):not(#simple_and_intuitive .trading-platforms__benefit .child .list .item:last-child) {
   margin-bottom: 40px;
 }
-#trading-platforms .trading-platforms__benefit .child .list .item .title {
+#trading-platforms .trading-platforms__benefit .child .list .item .title, #simple_and_intuitive .trading-platforms__benefit .child .list .item .title {
   font-size: 20px;
   font-weight: bold;
   line-height: 30px;
 }
-#trading-platforms .trading-platforms__benefit .child .list .item .desc {
+#trading-platforms .trading-platforms__benefit .child .list .item .desc, #simple_and_intuitive .trading-platforms__benefit .child .list .item .desc {
   font-size: 20px;
   line-height: 30px;
 }
-#trading-platforms .trading-platforms__reason .trading-platforms__reason-title {
+#trading-platforms .trading-platforms__reason .trading-platforms__reason-title, #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title {
   position: relative;
   text-align: center;
   padding-top: 24px;
 }
-#trading-platforms .trading-platforms__reason .trading-platforms__reason-title .group-title {
+#trading-platforms .trading-platforms__reason .trading-platforms__reason-title .group-title, #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title .group-title {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
 }
-#trading-platforms .trading-platforms__reason .trading-platforms__reason-title .group-title .title {
+#trading-platforms .trading-platforms__reason .trading-platforms__reason-title .group-title .title, #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title .group-title .title {
   font-weight: bold;
   font-size: 46px;
   line-height: 1;
 }
-#trading-platforms .trading-platforms__reason .trading-platforms__reason-title .group-title .subtitle {
+#trading-platforms .trading-platforms__reason .trading-platforms__reason-title .group-title .subtitle, #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title .group-title .subtitle {
   font-size: 34px;
   font-weight: bold;
   color: var(--c-red);
   line-height: 1;
 }
-#trading-platforms .trading-platforms__reason .trading-platforms__reason-list {
+#trading-platforms .trading-platforms__reason .trading-platforms__reason-list, #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list {
   max-width: 750px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 8px 0;
 }
-#trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item {
+#trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item, #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item {
   display: flex;
   align-items: flex-end;
   gap: 32px;
 }
-#trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(2) {
+#trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(2), #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(2) {
   gap: 70px;
 }
-#trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item:first-child {
+#trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item:first-child, #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:first-child {
   padding-right: 48px;
   padding-bottom: 64px;
 }
-#trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(2) {
+#trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(2), #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(2) {
   padding-left: 48px;
   padding-bottom: 64px;
   border-left: 1px solid var(--c-red);
   border-bottom: 1px solid var(--c-red);
   border-bottom-left-radius: 8px;
 }
-#trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(3) {
+#trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(3), #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(3) {
   padding-right: 48px;
   padding-top: 64px;
   border-right: 1px solid var(--c-red);
   border-top: 1px solid var(--c-red);
   border-top-right-radius: 8px;
 }
-#trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(4) {
+#trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(4), #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(4) {
   gap: 70px;
   padding-left: 48px;
   padding-top: 64px;
 }
-#trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item .item-icon {
+#trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item .item-icon, #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item .item-icon {
   width: 60px;
 }
-#trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item .item-title {
+#trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item .item-title, #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item .item-title {
   font-size: 22px;
   font-weight: bold;
   white-space: pre-line;
   line-height: 25px;
 }
 @media (max-width: 1300.98px) {
-  #trading-platforms .trading-platforms__head .child .child-img img {
+  #trading-platforms .trading-platforms__head .child .child-img img, #simple_and_intuitive .trading-platforms__head .child .child-img img {
     width: 100%;
   }
-  #trading-platforms .trading-platforms__benefit .child .benefit-img img {
+  #trading-platforms .trading-platforms__benefit .child .benefit-img img, #simple_and_intuitive .trading-platforms__benefit .child .benefit-img img {
     right: 60px;
     width: 100%;
   }
 }
 @media (max-width: 1000.98px) {
-  #trading-platforms .trading-platforms__head {
+  #trading-platforms .trading-platforms__head, #simple_and_intuitive .trading-platforms__head {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  #trading-platforms .trading-platforms__head .child:first-child {
+  #trading-platforms .trading-platforms__head .child:first-child, #simple_and_intuitive .trading-platforms__head .child:first-child {
     order: 2;
   }
-  #trading-platforms .trading-platforms__head .child .box-title .box-title__subtitle {
+  #trading-platforms .trading-platforms__head .child .box-title .box-title__subtitle, #simple_and_intuitive .trading-platforms__head .child .box-title .box-title__subtitle {
     margin-bottom: 40px;
   }
-  #trading-platforms .trading-platforms__head .child .child-img {
+  #trading-platforms .trading-platforms__head .child .child-img, #simple_and_intuitive .trading-platforms__head .child .child-img {
     text-align: center;
   }
-  #trading-platforms .trading-platforms__head .child .child-img img {
+  #trading-platforms .trading-platforms__head .child .child-img img, #simple_and_intuitive .trading-platforms__head .child .child-img img {
     position: unset;
     width: 60%;
   }
-  #trading-platforms .trading-platforms__why {
+  #trading-platforms .trading-platforms__why, #simple_and_intuitive .trading-platforms__why {
     margin-bottom: 80px;
   }
-  #trading-platforms .trading-platforms__why .trading-platforms__why-img img {
+  #trading-platforms .trading-platforms__why .trading-platforms__why-img img, #simple_and_intuitive .trading-platforms__why .trading-platforms__why-img img {
     width: 70%;
   }
-  #trading-platforms .trading-platforms__why .trading-platforms__why-content {
+  #trading-platforms .trading-platforms__why .trading-platforms__why-content, #simple_and_intuitive .trading-platforms__why .trading-platforms__why-content {
     grid-template-columns: 1fr;
   }
-  #trading-platforms .trading-platforms__why .trading-platforms__why-content .child .box-title {
+  #trading-platforms .trading-platforms__why .trading-platforms__why-content .child .box-title, #simple_and_intuitive .trading-platforms__why .trading-platforms__why-content .child .box-title {
     margin-bottom: 40px;
   }
-  #trading-platforms .trading-platforms__why .trading-platforms__why-content .child:last-child .box-title {
+  #trading-platforms .trading-platforms__why .trading-platforms__why-content .child:last-child .box-title, #simple_and_intuitive .trading-platforms__why .trading-platforms__why-content .child:last-child .box-title {
     margin-bottom: 40px;
   }
-  #trading-platforms .trading-platforms__benefit {
+  #trading-platforms .trading-platforms__benefit, #simple_and_intuitive .trading-platforms__benefit {
     grid-template-columns: 1fr;
     gap: 40px;
     margin-bottom: 100px;
   }
-  #trading-platforms .trading-platforms__benefit .child .benefit-img {
+  #trading-platforms .trading-platforms__benefit .child .benefit-img, #simple_and_intuitive .trading-platforms__benefit .child .benefit-img {
     text-align: center;
   }
-  #trading-platforms .trading-platforms__benefit .child .benefit-img img {
+  #trading-platforms .trading-platforms__benefit .child .benefit-img img, #simple_and_intuitive .trading-platforms__benefit .child .benefit-img img {
     position: unset;
     transform: unset;
     right: 0;
     width: 70%;
   }
-  #trading-platforms .trading-platforms__reason .trading-platforms__reason-title .img-reason {
+  #trading-platforms .trading-platforms__reason .trading-platforms__reason-title .img-reason, #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title .img-reason {
     width: 80%;
   }
 }
 @media (max-width: 800.98px) {
-  #trading-platforms .trading-platforms__reason .trading-platforms__reason-title .img-reason {
+  #trading-platforms .trading-platforms__reason .trading-platforms__reason-title .img-reason, #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title .img-reason {
     width: 90%;
+  }
+}
+@media (max-width: 600.98px) {
+  #trading-platforms .trading-platforms__reason .trading-platforms__reason-title .group-title, #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title .group-title {
+    width: 100%;
+  }
+  #trading-platforms .trading-platforms__reason .trading-platforms__reason-title .group-title .title, #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title .group-title .title {
+    font-size: 30px;
+  }
+  #trading-platforms .trading-platforms__reason .trading-platforms__reason-title .group-title .subtitle, #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title .group-title .subtitle {
+    font-size: 25px;
+  }
+  #trading-platforms .trading-platforms__reason .trading-platforms__reason-title .group-title .img-reason, #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title .group-title .img-reason {
+    width: 90%;
+  }
+  #trading-platforms .trading-platforms__reason .trading-platforms__reason-list, #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list {
+    grid-template-columns: 1fr;
+  }
+  #trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item:not(#trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item:last-child):not(#simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:last-child), #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:not(#trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item:last-child):not(#simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:last-child) {
+    margin-bottom: 20px;
+  }
+  #trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item:first-child, #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:first-child {
+    padding: 12px;
+    border: 1px solid var(--c-red);
+    border-radius: 8px;
+    align-items: center;
+  }
+  #trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(2), #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(2) {
+    padding: 12px;
+    border: 1px solid var(--c-red);
+    border-radius: 8px;
+    gap: 32px;
+    align-items: center;
+  }
+  #trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(3), #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(3) {
+    padding: 12px;
+    border: 1px solid var(--c-red);
+    border-radius: 8px;
+    align-items: center;
+  }
+  #trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(4), #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(4) {
+    padding: 12px;
+    border: 1px solid var(--c-red);
+    border-radius: 8px;
+    gap: 32px;
+    align-items: center;
+  }
+  #trading-platforms .trading-platforms__reason .trading-platforms__reason-list .item .item-title, #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item .item-title {
+    font-size: 16px;
   }
 }
 
@@ -3449,7 +3754,8 @@ p {
     gap: 40px;
   }
   #topic-payment_methods .box-topic .child .topic-img {
-    width: 60%;
+    width: 100%;
+    padding-right: 0;
   }
   #topic-payment_methods .box-topic .child .topic-group {
     padding-left: 0;
@@ -3479,6 +3785,15 @@ p {
 #payment_methods .box-payment_methods .child .payment_methods__content .payment_methods__content-desc {
   font-size: 20px;
   line-height: 35px;
+}
+@media (max-width: 1540.98px) {
+  #payment_methods .box-payment_methods .child .payment_methods__content .payment_methods__content-title {
+    font-size: 16px;
+  }
+  #payment_methods .box-payment_methods .child .payment_methods__content .payment_methods__content-desc {
+    font-size: 16px;
+    line-height: 30px;
+  }
 }
 @media (max-width: 1000.98px) {
   #payment_methods .box-payment_methods {
@@ -3735,6 +4050,30 @@ p {
 #contact .box-contact .child .contact-form .form-group textarea.form-control {
   height: 170px;
 }
+@media (max-width: 1540.98px) {
+  #contact .box-contact .child .left .title {
+    font-size: 20px;
+  }
+  #contact .box-contact .child .left .desc {
+    font-size: 16px;
+    margin-bottom: 60px;
+  }
+  #contact .box-contact .child .left .info .info-item:not(#contact .box-contact .child .left .info .info-item:last-child) {
+    margin-bottom: 40px;
+  }
+  #contact .box-contact .child .left .info .info-item .info-item__text {
+    font-size: 16px;
+  }
+  #contact .box-contact .child .contact-form .contact-form-title {
+    font-size: 20px;
+  }
+  #contact .box-contact .child .contact-form .form-group .form-control {
+    font-size: 16px;
+  }
+  #contact .box-contact .child .contact-form .form-group .form-control::placeholder {
+    font-size: 16px;
+  }
+}
 @media (max-width: 800.98px) {
   #contact {
     padding: 60px 0 160px;
@@ -3791,7 +4130,7 @@ p {
     gap: 40px;
   }
   #topic-faqs .box-topic .child .topic-img, #topic-about_us .box-topic .child .topic-img {
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
     display: block;
   }
@@ -3816,12 +4155,12 @@ p {
   grid-template-columns: 40px 1fr;
   gap: 40px;
   align-items: center;
-  height: 62px;
+  padding: 10px 0;
 }
 #faqs .faqs-list .faqs-item .faqs-item__title .faqs-item__title-name {
   font-size: 20px;
   color: var(--c-main);
-  line-height: 35px;
+  line-height: 27px;
   margin-bottom: 0;
 }
 #faqs .faqs-list .faqs-item .faqs-item__content .card-body {
@@ -3831,8 +4170,657 @@ p {
   font-style: italic;
   white-space: pre-line;
 }
+@media (max-width: 1540.98px) {
+  #faqs .faqs-list .faqs-item .faqs-item__title .faqs-item__title-name {
+    font-size: 16px;
+  }
+  #faqs .faqs-list .faqs-item .faqs-item__content .card-body {
+    font-size: 16px;
+  }
+}
 @media (max-width: 800.98px) {
   #faqs {
     padding: 70px 0 140px;
+  }
+}
+@media (max-width: 600.98px) {
+  #faqs .faqs-list .faqs-item .faqs-item__title {
+    gap: 20px;
+  }
+}
+
+#banner .owl-banner .owl-stage {
+  padding-top: 60px;
+  background-image: linear-gradient(0deg, rgb(246, 246, 246) 0%, rgba(255, 255, 255, 0) 100%);
+}
+#banner .owl-banner .item {
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  max-width: 1100px;
+  align-items: center;
+  margin: 0 auto;
+}
+#banner .owl-banner .item .item-group-title {
+  margin-bottom: 60px;
+}
+#banner .owl-banner .item .item-group-title .title {
+  color: var(--c-red);
+  font-size: 80px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  line-height: 1;
+}
+#banner .owl-banner .item .item-group-title .title span {
+  color: var(--c-text);
+  font-size: 60px;
+  display: block;
+}
+#banner .owl-banner .item .item-group-title .desc {
+  font-size: 25px;
+  line-height: 30px;
+  color: var(--c-main);
+  margin-bottom: 34px;
+}
+#banner .owl-banner .item .item-group-title .base-btn {
+  font-size: 22px;
+  line-height: 1;
+  height: 50px;
+}
+#banner .owl-banner .item .item-img {
+  width: 170%;
+}
+#banner .owl-banner .owl-dots {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+  position: relative;
+  bottom: 90px;
+}
+#banner .owl-banner .owl-dots button.active span {
+  background-color: var(--c-white);
+}
+#banner .owl-banner .owl-dots button span {
+  border: 1px solid var(--c-red);
+  background-color: var(--c-red);
+}
+@media (max-width: 1660.98px) {
+  #banner .owl-banner .item .item-group-title {
+    margin-bottom: 60px;
+  }
+  #banner .owl-banner .item .item-group-title .title {
+    font-size: 70px;
+  }
+  #banner .owl-banner .item .item-group-title .title span {
+    font-size: 50px;
+  }
+  #banner .owl-banner .item .item-group-title .desc {
+    font-size: 22px;
+  }
+  #banner .owl-banner .item .item-img {
+    width: 140%;
+  }
+}
+@media (max-width: 1500.98px) {
+  #banner .owl-banner .item {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #banner .owl-banner .item .item-group-title {
+    margin-bottom: 40px;
+  }
+  #banner .owl-banner .item .item-group-title .title {
+    font-size: 60px;
+    margin-bottom: 30px;
+  }
+  #banner .owl-banner .item .item-group-title .title span {
+    font-size: 40px;
+  }
+  #banner .owl-banner .item .item-group-title .desc {
+    font-size: 22px;
+  }
+  #banner .owl-banner .item .item-img {
+    width: 120%;
+  }
+  #banner .owl-banner .owl-dots {
+    bottom: 50px;
+  }
+}
+@media (max-width: 1100.98px) {
+  #banner .owl-banner .owl-stage {
+    padding-top: 0;
+  }
+  #banner .owl-banner .item {
+    grid-template-columns: 1fr;
+    position: relative;
+    padding: 40px 0;
+  }
+  #banner .owl-banner .item .item-group-title {
+    margin-bottom: 40px;
+    text-align: center;
+    z-index: 99;
+  }
+  #banner .owl-banner .item .item-group-title .title {
+    font-size: 60px;
+    margin-bottom: 30px;
+  }
+  #banner .owl-banner .item .item-group-title .title span {
+    font-size: 40px;
+  }
+  #banner .owl-banner .item .item-group-title .desc {
+    font-size: 22px;
+  }
+  #banner .owl-banner .item .item-group-title .base-btn {
+    margin: 0 auto;
+  }
+  #banner .owl-banner .item .item-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+  }
+  #banner .owl-banner .item .item-img img {
+    width: 100%;
+  }
+  #banner .owl-banner .owl-dots {
+    bottom: 40px;
+    text-align: center;
+  }
+}
+@media (max-width: 600.98px) {
+  #banner .owl-banner .item .item-group-title .title {
+    font-size: 40px;
+  }
+  #banner .owl-banner .item .item-group-title .title span {
+    font-size: 30px;
+  }
+}
+
+#ultimate {
+  overflow: hidden;
+}
+#ultimate .box-ultimate {
+  max-width: 1430px;
+  width: 100%;
+  margin: 90px auto 120px;
+  border-radius: 25px;
+  filter: drop-shadow(0px 12px 25.5px rgba(58, 58, 58, 0.15));
+  background-color: var(--c-white);
+  padding: 80px 0;
+}
+#ultimate .box-ultimate .box-ultimate-child {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+#ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-title {
+  font-size: 46px;
+  color: var(--c-text);
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+#ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-title span {
+  color: var(--c-red);
+  font-size: 34px;
+  display: block;
+}
+#ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-body {
+  display: grid;
+  grid-template-columns: 700px 1fr;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+#ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-body .child .child-item {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  gap: 30px;
+}
+#ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-body .child .child-item .child-item__content .child-item__content-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+#ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-body .child-img-right {
+  margin-top: -110px;
+}
+#ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-foot {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+#ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-foot .box-ultimate-child-foot__child {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  gap: 30px;
+  align-items: center;
+}
+#ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-foot .box-ultimate-child-foot__child.active .box-ultimate-child-foot__child-text {
+  color: var(--c-red);
+}
+#ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-foot .box-ultimate-child-foot__child .box-ultimate-child-foot__child-text {
+  font-size: 25px;
+  font-weight: bold;
+}
+@media (max-width: 1600.98px) {
+  #ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-title {
+    font-size: 40px;
+  }
+  #ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-title span {
+    font-size: 30px;
+  }
+  #ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-body {
+    grid-template-columns: 600px 1fr;
+  }
+  #ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-body .child .child-item .child-item__content .child-item__content-title {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  #ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-body .child .child-item .child-item__content .child-item__content-img img {
+    width: 100%;
+  }
+  #ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-body .child-img-right {
+    margin-top: -110px;
+    width: 140%;
+  }
+  #ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-foot {
+    gap: 20px;
+  }
+  #ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-foot .box-ultimate-child-foot__child .box-ultimate-child-foot__child-text {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1430.98px) {
+  #ultimate {
+    padding: 0 20px;
+  }
+  #ultimate .box-ultimate {
+    padding: 40px;
+  }
+  #ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-body .child-img-right {
+    margin-top: -110px;
+    width: 120%;
+  }
+}
+@media (max-width: 1100.98px) {
+  #ultimate .box-ultimate {
+    margin: 50px 0 70px;
+    padding: 40px;
+  }
+  #ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-title {
+    text-align: center;
+  }
+  #ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-body {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  #ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-body .child:first-child {
+    order: 2;
+  }
+  #ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-body .child-img-right {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+@media (max-width: 800.98px) {
+  #ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-foot {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600.98px) {
+  #ultimate .box-ultimate {
+    margin: 50px 0 70px;
+    padding: 40px;
+  }
+  #ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-title {
+    font-size: 30px;
+  }
+  #ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-title span {
+    font-size: 25px;
+  }
+  #ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-body {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  #ultimate .box-ultimate .box-ultimate-child .box-ultimate-child-body .child-img-right {
+    width: 100%;
+  }
+}
+
+#pricing {
+  margin: 0 0 150px;
+}
+#pricing .pricing-title {
+  font-size: 46px;
+  color: var(--c-text);
+  font-weight: bold;
+  margin-bottom: 50px;
+  text-align: center;
+}
+#pricing .pricing-title span {
+  color: var(--c-red);
+  font-size: 34px;
+  display: block;
+}
+@media (max-width: 1000.98px) {
+  #pricing {
+    margin: 0 0 120px;
+  }
+  #pricing .pricing-title {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  #pricing .pricing-title span {
+    font-size: 30px;
+  }
+}
+@media (max-width: 600.98px) {
+  #pricing .pricing-title {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  #pricing .pricing-title span {
+    font-size: 25px;
+  }
+}
+
+#simple_and_intuitive {
+  padding-top: 0;
+}
+#simple_and_intuitive .simple {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 200px;
+}
+#simple_and_intuitive .simple .child .simple-img {
+  position: relative;
+  height: 100%;
+}
+#simple_and_intuitive .simple .child .simple-img img {
+  position: absolute;
+  right: 170px;
+  bottom: -20px;
+}
+#simple_and_intuitive .simple .child .simple-title {
+  font-size: 46px;
+  color: var(--c-text);
+  font-weight: bold;
+  margin-bottom: 90px;
+}
+#simple_and_intuitive .simple .child .simple-title span {
+  color: var(--c-red);
+  font-size: 34px;
+  display: block;
+}
+#simple_and_intuitive .simple .child .simple-content {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 10px;
+}
+#simple_and_intuitive .simple .child .simple-content .simple-content__icon {
+  width: 100%;
+}
+#simple_and_intuitive .simple .child .simple-content .simple-content__box .simple-content__box-title {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 36px;
+}
+#simple_and_intuitive .simple .child .simple-content .simple-content__box .simple-content__box-desc {
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 25px;
+}
+#simple_and_intuitive .simple .child .simple-content .simple-content__box .simple-content__box-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style-type: circle;
+  row-gap: 30px;
+  margin-bottom: 50px;
+  padding-left: 20px;
+}
+#simple_and_intuitive .simple .child .simple-content .simple-content__box .simple-content__box-list li {
+  font-size: 16px;
+}
+#simple_and_intuitive .simple .child .simple-content .simple-content__box .simple-content__box-list li::marker {
+  color: var(--c-red);
+}
+#simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title {
+  position: relative;
+  text-align: center;
+}
+#simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title .title {
+  font-weight: bold;
+  font-size: 46px;
+  margin-bottom: 0;
+  position: relative;
+}
+#simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title .title span {
+  font-size: 34px;
+  font-weight: bold;
+  color: var(--c-red);
+  display: block;
+}
+#simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title .img-reason {
+  margin-top: -60px;
+}
+#simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list {
+  max-width: 750px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 0;
+}
+#simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item {
+  display: flex;
+  align-items: flex-end;
+  gap: 32px;
+}
+#simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(2) {
+  gap: 70px;
+}
+#simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:first-child {
+  padding-right: 48px;
+  padding-bottom: 64px;
+}
+#simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(2) {
+  padding-left: 48px;
+  padding-bottom: 64px;
+  border-left: 1px solid var(--c-red);
+  border-bottom: 1px solid var(--c-red);
+  border-bottom-left-radius: 8px;
+}
+#simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(3) {
+  padding-right: 48px;
+  padding-top: 64px;
+  border-right: 1px solid var(--c-red);
+  border-top: 1px solid var(--c-red);
+  border-top-right-radius: 8px;
+}
+#simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(4) {
+  gap: 70px;
+  padding-left: 48px;
+  padding-top: 64px;
+}
+#simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item .item-icon {
+  width: 60px;
+}
+#simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item .item-title {
+  font-size: 22px;
+  font-weight: bold;
+  white-space: pre-line;
+  line-height: 25px;
+}
+@media (max-width: 1000.98px) {
+  #simple_and_intuitive .simple {
+    grid-template-columns: 1fr;
+    margin-bottom: 80px;
+    gap: 60px;
+  }
+  #simple_and_intuitive .simple .child .simple-img {
+    text-align: center;
+  }
+  #simple_and_intuitive .simple .child .simple-img img {
+    position: unset;
+  }
+  #simple_and_intuitive .simple .child .simple-title {
+    font-size: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  #simple_and_intuitive .simple .child .simple-title span {
+    font-size: 30px;
+  }
+  #simple_and_intuitive .simple .child .simple-content .simple-content__box .simple-content__box-img {
+    margin: 0 auto;
+    display: block;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title {
+    padding-top: 0;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title .title {
+    font-size: 40px;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title .title span {
+    font-size: 30px;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title .img-reason {
+    margin-top: -60px;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list {
+    max-width: 750px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 0;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item {
+    display: flex;
+    align-items: flex-end;
+    gap: 32px;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(2) {
+    gap: 70px;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:first-child {
+    padding-right: 48px;
+    padding-bottom: 64px;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(2) {
+    padding-left: 48px;
+    padding-bottom: 64px;
+    border-left: 1px solid var(--c-red);
+    border-bottom: 1px solid var(--c-red);
+    border-bottom-left-radius: 8px;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(3) {
+    padding-right: 48px;
+    padding-top: 64px;
+    border-right: 1px solid var(--c-red);
+    border-top: 1px solid var(--c-red);
+    border-top-right-radius: 8px;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(4) {
+    gap: 70px;
+    padding-left: 48px;
+    padding-top: 64px;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item .item-icon {
+    width: 60px;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item .item-title {
+    font-size: 22px;
+    font-weight: bold;
+    white-space: pre-line;
+    line-height: 25px;
+  }
+}
+@media (max-width: 1000.98px) {
+  #simple_and_intuitive .simple .child .simple-img img {
+    width: 100%;
+  }
+  #simple_and_intuitive .simple .child .simple-title {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  #simple_and_intuitive .simple .child .simple-title span {
+    font-size: 25px;
+  }
+}
+@media (max-width: 600.98px) {
+  #simple_and_intuitive .simple .child .simple-img img {
+    width: 100%;
+  }
+  #simple_and_intuitive .simple .child .simple-title {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  #simple_and_intuitive .simple .child .simple-title span {
+    font-size: 25px;
+  }
+  #simple_and_intuitive .simple .child .simple-content {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  #simple_and_intuitive .simple .child .simple-content .simple-content__icon {
+    width: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  #simple_and_intuitive .simple .child .simple-content .simple-content__box .simple-content__box-img {
+    width: 100%;
+  }
+  #simple_and_intuitive .simple .child .simple-content .simple-content__box .simple-content__box-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  #simple_and_intuitive .simple .child .simple-content .simple-content__box .simple-content__box-desc {
+    text-align: center;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title .title {
+    font-size: 24px;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title .title span {
+    font-size: 20px;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title .img-reason {
+    width: 90%;
+    margin-top: -20px;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-title .group-title {
+    width: 100%;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list {
+    grid-template-columns: 1fr;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:not(#simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:last-child) {
+    margin-bottom: 20px;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:first-child {
+    padding: 12px;
+    border: 1px solid var(--c-red);
+    border-radius: 8px;
+    align-items: center;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(2) {
+    padding: 12px;
+    border: 1px solid var(--c-red);
+    border-radius: 8px;
+    gap: 32px;
+    align-items: center;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(3) {
+    padding: 12px;
+    border: 1px solid var(--c-red);
+    border-radius: 8px;
+    align-items: center;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item:nth-child(4) {
+    padding: 12px;
+    border: 1px solid var(--c-red);
+    border-radius: 8px;
+    gap: 32px;
+    align-items: center;
+  }
+  #simple_and_intuitive .trading-platforms__reason .trading-platforms__reason-list .item .item-title {
+    font-size: 16px;
   }
 }

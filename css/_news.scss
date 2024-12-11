@@ -24,7 +24,6 @@
                 .topic-title {
                     color: var(--c-red);
                     font-size: 50px;
-                    font-family: "UTMHelveBold", sans-serif;
                     font-weight: bold;
                     margin-bottom: 30px;
                 }
@@ -49,14 +48,35 @@
         }
     }
 
+    @media (max-width: 1540.98px) {
+        .box-topic {
+            .child {
+                .topic-group {
+                    .topic-title {
+                        font-size: 40px;
+                    }
+    
+                    .topic-desc {
+                        font-size: 20px;
+                    }
+    
+                    .topic-btn {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
     @media (max-width: 800.98px) {
+        padding: 40px 0;
         .box-topic {
             grid-template-columns: 1fr;
             gap: 32px;
 
             .child {
                 .topic-img {
-                    width: 60%;
+                    width: 80%;
                 }
 
                 .topic-group {
@@ -113,6 +133,20 @@
             .item-desc {
                 color: var(--c-text);
                 font-size: 18px;
+            }
+        }
+    }
+
+    @media (max-width: 1540.98px) {
+        .box-list {
+            .item {
+                .item-title {
+                    font-size: 16px;
+                }
+    
+                .item-desc {
+                    font-size: 16px;
+                }
             }
         }
     }
@@ -336,6 +370,18 @@
             }
         }
     }
+
+    @media (max-width: 440.98px) {
+        .start_trading-step {
+            .child {
+                .child-round {
+                    .child-img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }
 
 #news-detail {
@@ -386,6 +432,30 @@
         .img {
             border-radius: 12px;
             height: 320px;
+        }
+    }
+
+    @media (max-width: 1540.98px) {
+        .news-detail__1 {
+            .content {
+                .title {
+                    font-size: 24px;
+                }
+    
+                .desc {
+                    font-size: 16px;
+                }
+            }
+        }
+    
+        .news-detail__2 {
+            .content {
+                padding-left: 100px;
+    
+                .desc {
+                    font-size: 16px;
+                }
+            }
         }
     }
 
